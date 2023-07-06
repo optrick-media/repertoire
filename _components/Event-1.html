@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-1</title>
+
+    <!-- To correct favicon error -->
+    <link rel="shortcut icon" href="#" />
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            margin: 0 auto;
+            max-width: 45em;
+            background-color: rgb(235, 235, 235);
+            min-height: 20px;
+            padding: 15px;
+        }
+
+        section:not([class]) {
+            /* every section without class - but won't select Section C */
+            min-height: 100px;
+        }
+
+        .big-font {
+            font-size: 1.25em;
+        }
+
+        .cool {
+            background-color: aqua;
+        }
+
+        .warm {
+            background-color: darkorange;
+        }
+
+        .purple {
+            background-color: lavender;
+        }
+
+        .green {
+            background-color: aquamarine;
+        }
+    </style>
+    <div id="page">
+        <div>
+            <h1 id="header">Event</h1>
+
+        </div>
+        <div>
+            <h2 id="header">Event Listeners with parameters</h2>
+            <form method="post" action="#">
+                <label for="mySelf">Create yourself:</label>
+                <input type="text" id="mySelf" />
+                <div id="feedback"></div>
+                <input type="submit" value="Sign up">
+            </form>
+
+            <hr>
+        </div>
+        <script>
+            var elMyself = document.getElementById('mySelf');
+            var leMsg = document.getElementById('feedback');
+
+            function checkMyself(minLength) {
+                if (elMyself.value.length < minLength) {
+                    leMsg.textContent = ' Yourself need to be longer. Yourself  need to be ' + minLength + ' ';
+                } else {
+                    leMsg.textContent = 'Good good. We like is longer than ' + minLength;
+                }
+            }
+
+            elMyself.addEventListener('blur', function () {
+                checkMyself(5);
+            }, false);
+        </script>
+        <div>
+            <h2 id="header">Event Listeners</h2>
+            <form method="post" action="#">
+                <label for="yourself">Create yourself:</label>
+                <input type="text" id="yourself" />
+                <div id="feedback"></div>
+                <input type="submit" value="Sign up">
+            </form>
+
+            <hr>
+        </div>
+        <script>
+            function checkYourself() {
+                var elMsg = document.getElementById('feedback');
+                if (this.value.length < 5) {
+                    elMsg.textContent = ' Yourself need to be longer. Add yourself';
+                } else {
+                    elMsg.textContent = 'Good good';
+                }
+            }
+
+            var elYourself = document.getElementById('yourself');
+            elYourself.addEventListener('blur', checkYourself, false);
+        </script>
+
+        <div>
+            <h2 id="header">Traditional DOM event handlers</h2>
+            <form method="post" action="#">
+                <label for="yourself">Create yourself:</label>
+                <input type="text" id="yourself" onBlur="checkYourself()" />
+                <div id="feedback"></div>
+                <input type="submit" value="Sign up">
+            </form>
+            <hr>
+        </div>
+        <script>
+            function checkYourself() {
+                var elMsg = document.getElementById('feedback');
+                if (elYourself.value.length < 5) {
+                    elMsg.textContent = 'yourself is to short. Add letter';
+
+                } else {
+                    elMsg.textContent = '';
+                }
+            }
+
+            var elYourself = document.getElementById('yourself');
+            console.log(elYourself);
+
+            elYourself.onBlur = checkYourself;
+        </script>
+        <div>
+            <h2 id="header">Event-1</h2>
+
+            <button id="mouseOver" class="onBlurButton button">Blur Me</button>
+            <script>
+                document.getElementById("mouseOver").addEventListener("mouseover", mouseOver);
+
+                // document.getElementById("mouseOver").addEventListener("mouseout", mouseOut);
+
+
+
+                function mouseOver() {
+                    document.getElementById("mouseOver").style.color = "red";
+                }
+
+                        // function mouseOut() {
+                        //     document.getElementById("mouseOver").style.color = "black";
+                        // }
+
+            </script>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

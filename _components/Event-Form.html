@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Form</title>
+
+    <!-- To correct favicon error -->
+    <link rel="shortcut icon" href="#" />
+</head>
+
+<body id="body">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            margin: 0 auto;
+            max-width: 45em;
+            background-color: rgb(235, 235, 235);
+            min-height: 20px;
+            padding: 15px;
+        }
+
+        form,
+        input {
+            display: block;
+        }
+
+        section:not([class]) {
+            /* every section without class - but won't select Section C */
+            min-height: 100px;
+        }
+
+        .big-font {
+            font-size: 1.25em;
+        }
+
+        .cool {
+            background-color: aqua;
+        }
+
+        .warning {
+            background-color: darkorange;
+        }
+
+        .tip {
+            background-color: lavender;
+        }
+    </style>
+    <div id="page">
+        <div>
+            <h1 id="header">Event</h1>
+        </div>
+        <div>
+            <h2>HTML5 Events</h2>
+            <form id="messageForm" action="http://example.org/">
+
+                <textarea id="message"></textarea>
+                <input type="submit" value="next" />
+
+            </form>
+        </div>
+        <script>
+            function setup() {
+                let textInput;
+                textInput = document.getElementById('message');
+                textInput.focus();
+            }
+
+            window.addEventListener('DOMContentLoaded', setup, false);
+
+            window, addEventListener('beforeunload', function (event) {
+                let message = 'You have not been save to yourself ...';
+
+                (event || window.event).returnValue = message;
+                return message;
+            });
+        </script>
+        <div>
+            <h2>Mutation Event</h2>
+            <h3>Buy Groceries <span id="counter">1</span></h3>
+            <ul id="list">
+                <li>fresh figs</li>
+            </ul>
+            <div class="button"><a href="/additem" class="add">Add list item</a></div>
+        </div>
+        <script>
+            let elList, addLink, newEl, newText, counter, listItems;
+
+            elList = document.getElementById('list');
+            addLink = document.querySelector('a');
+            counter = document.getElementById('counter');
+
+            function addItem(e) {
+                e.preventDefault();
+                newEl = document.createElement('li');
+                newText = document.createTextNode('New list item');
+                newEl.appendChild(newText);
+                elList.appendChild(newEl);
+            }
+
+            function updateCount() {
+                listItems = elList.getElementsByTagName('li').length;
+                counter.innerHTML = listItems;
+            }
+
+            addLink.addEventListener('click', addItem, false);
+            elList.addEventListener('DOMNodeInserted', updateCount, false);
+        </script>
+        <div>
+            <h2 id="header">Form</h2>
+            <form method="post" action="http://www.example.org/register" id="formSignup">
+                <h3>Membership</h3>
+
+                <label for="package" class="selectbox"> Select a package: </label>
+                <select id="package">
+                    <option value="-">-</option>
+                    <option value="annual">1 year ($50)</option>
+                    <option value="monthly">1 month ($5)</option>
+                </select>
+                <p id="packageHint" class="tip"></p>
+
+                <input type="checkbox" id="terms" />
+                <label for="terms" class="checkbox"> Check to agree to terms &amp; conditions</label>
+                <p id="termsHint" class="warning"></p>
+
+                <input type="submit" value="next" />
+
+            </form>
+        </div>
+
+        <hr>
+    </div>
+
+    <script>
+        let elForm, elSelectPackage, elPackageHint, elTerms, elTermsHint;
+        elForm = document.getElementById('formSignup');
+        elSelectPackage = document.getElementById('package');
+        elPackageHint = document.getElementById('packageHint');
+        elTerms = document.getElementById('terms');
+        elTermsHint = document.getElementById('termsHint');
+
+        function packageHint() {
+            let pack = this.options[this.selectedIndex].value;
+            if (pack == 'monthly') {
+                elPackageHint.innerHTML = 'Save $10 if you pay for 1 year';
+            } else if (pack == '-') {
+                elPackageHint.innerHTML = 'chose a life';
+            } else {
+                elPackageHint.innerHTML = 'wise chose';
+            }
+        }
+
+        function checkTerms(event) {
+            if (!elTerms.checked) {
+                elTermsHint.innerHTML = 'If it\'s not fuck yeah! it\'s no';
+                event.preventDefault();
+            }
+        }
+
+        elForm.addEventListener('submit', checkTerms, false);
+        elSelectPackage.addEventListener('change', packageHint, false);
+    </script>
+    </div>
+
+
+</body>
+
+</html>

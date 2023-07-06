@@ -1,0 +1,598 @@
+@charset "UTF-8";
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+.flow>*+* {
+    margin-top: 0.75rem !important;
+}
+
+@media (min-width: 768px) {
+    .flow>*+* {
+        margin-top: 1rem !important;
+    }
+}
+
+.wrap {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.justify-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.justify-content figure,
+.justify-content img {
+    max-width: 225px;
+}
+
+.justify-content .button {
+    margin: 0;
+    text-align: center;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .flex {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+}
+
+.row.flex {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .row.flex.flow {
+        margin-top: 0;
+    }
+
+    .row.flex .colonne:not(:first-of-type) {
+        margin: 0 0 0 32px !important;
+    }
+}
+
+.fullwidth {
+    position: relative;
+    right: 50%;
+    left: 50%;
+    width: 100vw;
+    margin-right: -50vw;
+    margin-left: -50vw;
+}
+
+/* aside {
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    aside {
+        max-width: calc(100% / 4);
+    }
+} */
+
+aside .SidebarArticle-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    margin-bottom: 20px;
+}
+
+body {
+    line-height: 1.5;
+    font-family: Georgia, serif;
+}
+
+h2,
+h3 {
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+p {
+    font-size: clamp(var(--fluid-type-min, 0.7rem), calc(1rem + var(--fluid-type-target, 3vw)), var(--fluid-type-max, 1rem));
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    --fluid-type-min: 1.5rem;
+    --fluid-type-max: 3rem;
+    --fluid-type-target: 4vw;
+    font-weight: 700;
+    max-width: 45ch;
+}
+
+h2 {
+    --fluid-type-min: 1.5rem;
+    --fluid-type-max: 2rem;
+}
+
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+    --fluid-type-min: 1.2rem;
+    --fluid-type-max: 1.5rem;
+}
+
+h2,
+h3 {
+    max-width: 30ch;
+    font-weight: 200;
+}
+
+p {
+    max-width: 60ch;
+}
+
+.body-parallax {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    max-width: 50em;
+    margin: 0 auto;
+    background-color: azure;
+}
+
+.body-parallax .parallax-group {
+    position: relative;
+    display: block;
+    height: 100vh;
+    width: 33.33333%;
+    border-right: 1px solid #687789;
+    width: 25%;
+}
+
+.body-parallax .parallax {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 0.75rem;
+    z-index: 0;
+}
+
+.body-parallax .parallax-item {
+    position: absolute;
+    display: block;
+    width: 1em;
+    height: 1em;
+    right: -0.78125em;
+    margin-bottom: 1em;
+}
+
+.body-parallax .parallax-group:nth-child(1) {
+    border-left: 1px solid #687789;
+    -webkit-animation: expand 200ms normal ease-out;
+    animation: expand 200ms normal ease-out;
+}
+
+.body-parallax .parallax-group:nth-child(2) {
+    -webkit-animation: expand 400ms normal ease-out;
+    animation: expand 400ms normal ease-out;
+}
+
+.body-parallax .parallax-group:nth-child(3) {
+    -webkit-animation: expand 600ms normal ease-out;
+    animation: expand 600ms normal ease-out;
+}
+
+.body-parallax .parallax-group:nth-child(4) {
+    -webkit-animation: expand 800ms normal ease-out;
+    animation: expand 800ms normal ease-out;
+}
+
+/* Frame content */
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: rgba(235, 235, 235, 0.8); */
+    color: #5a5a5a;
+    font-family: sans-serif;
+}
+
+nav a {
+    color: #6e6e6e;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0.6rem 0 0.3rem;
+}
+
+nav li {
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+main,
+section,
+nav,
+footer,
+header {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.skip-content {
+    display: none;
+}
+
+/*  2022 - content-blog */
+/* test variante  overlapnoeud-V4  */
+/* body {
+    max-width: 60em;
+    margin: 0 auto;
+} */
+
+.header {
+    height: 70vh;
+    max-height: 1150px;
+    z-index: 40;
+    padding: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='40' height='40' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(135)'%3E%3Crect width='100%25' height='100%25' fill='%232a4365'/%3E%3Cpath d='M0 29a 9-9 0 0 0 9-9a 11-11 0 0 1 11-11v2a-9 9 0 0 0-9 9a-11 11 0 0 1-11 11zM0 69a 9-9 0 0 0 9-9a 11-11 0 0 1 11-11v2a-9 9 0 0 0-9 9a-11 11 0 0 1-11 11z' fill='%231a202c'/%3E%3Cpath d='M20 29.5a 9.5-9.5 0 0 0 9.5-9.5a 10.5-10.5 0 0 1 10.5-10.5v1a-9.5 9.5 0 0 0-9.5 9.5a-10.5 10.5 0 0 1-10.5 10.5z' fill='%23ecc94b'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+    opacity: .2;
+}
+
+.nav,
+.main,
+.footer {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #e1e1ff;
+    padding: 0 6em;
+}
+
+.main {
+    min-height: 1500px;
+    overflow: hidden;
+    max-width: 60em;
+    z-index: 100;
+}
+
+.main.overlapse-position {
+    margin-top: -75px;
+}
+
+@media (min-width: 768px) {
+    .main.overlapse-position {
+        margin-top: -125px;
+    }
+}
+
+.nav {
+    max-width: 60em;
+    margin: 0 auto;
+    min-height: 75px;
+}
+
+.nav.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 200;
+}
+
+.nav div:not(:first-child) a:after {
+    content: ' -';
+}
+
+.nav div:first-child {
+    font-size: 1.5em;
+}
+
+/* Utility/effect */
+.hr {
+    height: 10px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.hr::before {
+    content: "";
+    background-image: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 156.2 17' enable-background='0 0 156.2 17'><path d='m156.2 0v1c-4.6 0-6.9 3.8-9.3 7.8-2.5 4.1-5 8.2-10.2 8.2s-7.7-4.2-10.2-8.2c-2.4-4-4.7-7.8-9.3-7.8s-6.9 3.8-9.3 7.8c-2.5 4.1-5 8.2-10.2 8.2s-7.7-4.2-10.2-8.2-4.8-7.8-9.4-7.8-6.9 3.8-9.3 7.8c-2.5 4.1-5 8.2-10.2 8.2s-7.7-4.2-10.2-8.2-4.8-7.8-9.4-7.8-6.9 3.8-9.3 7.8c-2.5 4.1-5 8.2-10.2 8.2s-7.7-4.2-10.2-8.2c-2.4-4-4.7-7.8-9.3-7.8v-1c5.2 0 7.7 4.2 10.2 8.2 2.4 4 4.7 7.8 9.3 7.8s6.9-3.8 9.3-7.8c2.5-4 5.1-8.2 10.2-8.2 5.2 0 7.7 4.2 10.2 8.2 2.4 4 4.7 7.8 9.3 7.8s6.9-3.8 9.3-7.8c2.5-4.1 5-8.2 10.2-8.2s7.7 4.2 10.2 8.2c2.4 4 4.7 7.8 9.3 7.8s6.9-3.8 9.3-7.8c2.5-4.1 5-8.2 10.2-8.2s7.7 4.2 10.2 8.2c2.4 4 4.7 7.8 9.3 7.8s6.9-3.8 9.3-7.8c2.7-4 5.2-8.2 10.4-8.2' fill='red'/></svg>");
+    background-repeat: repeat-x;
+    width: 300px;
+    height: 100%;
+    position: absolute;
+}
+
+.body-vertallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    z-index: 1000;
+    background-image: url(../media/img/short-dashed-line.png);
+    background-repeat: repeat;
+}
+
+.special-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 150, 0.3);
+    background-repeat: repeat;
+}
+
+/* Specification */
+.section-head {
+    min-height: 125px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/*  2022 - Blog framework  fondé sur configDoc de So3 */
+/* Base CSS pour fichier LOG USE the same logic between project */
+/* .main-content.wrapper {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .main-content.wrapper {
+        max-width: calc(100% / 4 * 3 - 32px);
+    }
+} */
+
+
+.main-content a {
+    line-height: 1.5;
+    color: #505050;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .8em;
+    padding: 3px;
+    border-radius: 4px;
+    display: block;
+}
+
+.main-content a:hover {
+    background-color: aqua;
+}
+
+.main-content a:before {
+    content: '';
+}
+
+.main-content p {
+    margin: 10px 0 0;
+}
+
+.main-content span {
+    color: unset;
+}
+
+.main-content span:before {
+    content: '\202F-';
+}
+
+.main-content span.r {
+    color: red;
+}
+
+.main-content span.b {
+    color: blue;
+}
+
+.main-content span.v {
+    color: green;
+}
+
+.main-content span.done {
+    text-decoration: line-through;
+}
+
+.main-content hr {
+    margin: 0 0 5px 0;
+    width: 100%;
+}
+
+ul.setCalendar {
+    margin-left: 5vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+ul.setCalendar li {
+    margin-left: 5vw;
+    min-height: 2vh;
+    border-left: 1px solid grey;
+}
+
+ul.setCalendar li::before {
+    content: '-';
+    padding-right: 8px;
+}
+
+
+.main-content .col {
+    min-width: 14em;
+    width: 100%;
+    padding: 0 10px 10px;
+}
+
+.main-content .col:not(:first-of-type) {
+    margin-left: 1em;
+}
+
+/*# sourceMappingURL=blog.css.map */

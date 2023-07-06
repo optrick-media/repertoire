@@ -1,0 +1,1 @@
+const accordion=document.querySelector(".accordion");console.log(accordion),accordion.addEventListener("click",(o=>{const c=o.target.closest(".accordion-panel");c&&console.log(c)}));

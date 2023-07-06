@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>addEventListener-querySelectorAll.html</title>
+</head>
+<body>
+<style>
+
+
+*,
+    html,
+    body {
+    padding: 0;
+    margin: 0;
+    }
+
+    .box {
+    width: 10rem;
+    height: 10rem;
+    background-color: yellowgreen;
+    float: left;
+    position: relative;
+    margin: 0.5rem;
+    transition: .5s all;
+    }
+
+    h3 {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+    .box:not(:first-child) {
+    margin-left: 1rem;
+    }
+
+    .red {
+    background-color: orangered;
+    }
+</style>
+
+    <div id="box1" class="box box1">
+        <h3>Box 1</h3>
+    </div>
+    <div id="box2" class="box box2">
+        <h3>Box 2</h3>
+    </div>
+    <div id="box3" class="box box3">
+        <h3>Box 3</h3>
+    </div>
+    <div id="box4" class="box box4">
+        <h3>Box 4</h3>
+    </div>
+
+    <script>
+        let cbox = document.querySelectorAll(".box");
+        cbox.forEach(box => {
+            box.addEventListener('click', () => box.classList.toggle("red"));
+        });
+
+    </script>
+
+</body>
+
+</html>

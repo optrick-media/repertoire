@@ -1,2 +1,6 @@
-# repertoire
-  This is my repertoire: a list of snippets and components that rule my world.
+# repertoire-OptrickMedia
+repertoire de recherche pour Optrick Media
+
+mix de components / features ready to use 
+
+Mix So3 - BEM

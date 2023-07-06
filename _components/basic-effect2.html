@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic-effect2</title>
+
+    <!-- To correct favicon error -->
+    <link rel="shortcut icon" href="#" />
+</head>
+
+<body id="body">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            margin: 0 auto;
+            max-width: 45em;
+            background-color: hsl(0, 0%, 92%);
+            min-height: 20px;
+            padding: 15px;
+        }
+
+        form,
+        input {
+            display: block;
+        }
+
+        section:not([class]) {
+            /* every section without class - but won't select Section C */
+            min-height: 100px;
+        }
+
+        .big-font {
+            font-size: 1.25em;
+        }
+
+        .cool {
+            background-color: aqua;
+        }
+
+        .warning {
+            background-color: darkorange;
+        }
+
+        .tip {
+            background-color: lavender;
+        }
+
+        .link {
+            background-color: lavender;
+            padding: 4px;
+        }
+
+        .date {
+            color: hsl(0, 0%, 44%);
+        }
+
+        .seasonal:before {
+            content: '';
+            background: url(../media/img/rhino.jpg) no-repeat;
+            background-size: contain;
+            width: 35px;
+            height: 25px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    </style>
+
+    <div id="page">
+        <h1 id="header">List</h1>
+        <h2>Buy groceries</h2>
+        <ul>
+            <li id="one" class="hot"><em>fresh</em> figs</li>
+            <li id="two" class="hot">pine nuts</li>
+            <li id="three" class="hot">honey</li>
+            <li id="four">balsamic vinegar</li>
+        </ul>
+        <p id="notes">Click or mouseover a hot item...</p>
+    </div>
+
+
+
+    <script src="../dist/js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function () {
+            let $li = $('li');
+            $li.on('click', function () {
+                $(this).animate({
+                    opacity: 0.0,
+                    paddingLeft: '+=80'
+                }, 500, function () {
+                    $(this).remove();
+                });
+            });
+        });
+
+
+
+    </script>
+</body>
+
+</html>

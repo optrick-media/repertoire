@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision</title>
+
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            margin: 0 auto;
+            max-width: 45em;
+            background-color: rgb(235, 235, 235);
+            min-height: 100px;
+
+            padding: 15px;
+        }
+    </style>
+    <div>
+        <h3>
+            switch
+        </h3>
+        <select id="scoreSelectorSwitch" name="scoreSelectorSwitch">
+            <option value="-">-</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <p>
+            <span class="switchCase" id="switchCase"></span>
+        </p>
+    </div>
+    <script>
+        var msg = 'Take the test';
+        var level = 1;
+        document.getElementById('scoreSelectorSwitch').onchange = changeListenerCase;
+
+        function changeListenerCase() {
+            var getScoreFromSelectSwitch = document.getElementById('scoreSelectorSwitch').value;
+            var level = parseFloat(getScoreFromSelectSwitch);
+            console.log(getScoreFromSelectSwitch);
+
+            switch (level) {
+                case 1:
+                    msg = 'Good luck on the first test';
+                    break;
+                case 2:
+                    msg = 'Second of three - keep going!';
+                    break;
+                case 3:
+                    msg = 'Final round, almost there!';
+                    break;
+                default:
+                    msg = 'Good luck!'
+                    break;
+            }
+
+            var el = document.getElementById('switchCase');
+            el.textContent = msg;
+        }
+
+    </script>
+
+    <div>
+        <h3>
+            if Statement
+        </h3>
+        <p>Select score: </p>
+        <select id="scoreSelector" name="scoreSelector">
+            <option value="-">-</option>
+            <option value="75">75</option>
+            <option value="45">45</option>
+        </select>
+        <p>
+            <span class="ifStatement" id="ifStatement"></span>
+        </p>
+    </div>
+    <script>
+        // TEST  ifStatement
+        msg = 'Try to pass the test';
+        var el = document.getElementById('ifStatement');
+        el.textContent = msg;
+
+        document.getElementById("scoreSelector").onchange = changeListener;
+
+        function changeListener() {
+            var getScoreFromSelect = document.getElementById('scoreSelector').value;
+            console.log(getScoreFromSelect)
+            var score = getScoreFromSelect;
+            //    var score = 45;
+            var msg;
+
+            function congratulate() {
+                msg += ' Congratulations! ';
+            }
+
+            if (score >= 50) {
+                msg = 'Congratulations!';
+                msg += ' Proceed to the next round.';
+            } else if (score < 50) {
+                msg = 'Try again!';
+            } else {
+                msg = 'Try to pass the test';
+            }
+
+            var el = document.getElementById('ifStatement');
+            el.textContent = msg;
+        }
+    </script>
+
+
+    <div>
+        <h3>
+            logical OR <br>
+            logical &
+        </h3>
+        <p>
+            <span class="logical_OR" id="logical_OR"></span>
+        </p>
+    </div>
+    <script>
+        // TEST  logical_OR
+        var score1 = 8;
+        var score2 = 8;
+        var pass1 = 6;
+        var pass2 = 6;
+
+        var minPass = ((score1 >= pass1) || (score2 >= pass2));
+
+        var msg = 'Resit required: ' + !minPass;
+
+        var el = document.getElementById('logical_OR');
+        el.textContent = msg;
+    </script>
+
+    <div>
+        <h3>
+            logical &
+        </h3>
+        <p>
+            <span class="logical" id="logical"></span>
+        </p>
+    </div>
+    <script>
+        // TEST  logical
+        var score1 = 8;
+        var score2 = 8;
+        var pass1 = 6;
+        var pass2 = 6;
+
+        var passBoth = (score1 >= pass1) && (score2 >= pass2);
+
+        var msg = 'Both rounds passed: ' + passBoth;
+
+        var el = document.getElementById('logical');
+        el.textContent = msg;
+    </script>
+
+    <div>
+        <h3>
+            comparing two expressions
+        </h3>
+        <p>
+            <span class="two_comparaison_operator" id="two_comparaison_operator"></span>
+        </p>
+    </div>
+    <script>
+        // TEST  two_comparaison_operator
+        var score1 = 90;
+        var score2 = 95;
+        var highScore1 = 70;
+        var highScore2 = 95;
+
+        var comparison = (score1 + score2) > (highScore1 + highScore2);
+
+        var el = document.getElementById('two_comparaison_operator');
+        el.textContent = 'New high score: ' + comparison;
+    </script>
+
+    <div>
+        <h3>
+            comparing simple operator
+        </h3>
+        <p>
+            <span class="comparaison_operator" id="comparaison_operator"></span>
+        </p>
+    </div>
+    <script>
+        // TEST  comparaison_operator
+        var pass = 50;
+        var score = 90;
+
+        var hasPassed = score >= pass;
+
+        var el = document.getElementById('comparaison_operator');
+        el.textContent = ' Level passed: ' + hasPassed;
+    </script>
+
+
+    <div>
+        <p>Hello, Snippets!</p>
+        <p>Hello, Snippets!</p>
+        <p>Hello, Snippets!</p>
+        <p>Hello, Snippets!</p>
+        <p>Hello, Snippets!</p>
+        <p id="demo" class="root"></p>
+        <p class="root"></p>
+    </div>
+
+</body>
+
+</html>

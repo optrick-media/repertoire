@@ -1,0 +1,530 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil professionnel - Blogue layout 1.1</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+
+    body {
+      line-height: 1;
+    }
+
+    ol,
+    ul {
+      list-style: none;
+    }
+
+    blockquote,
+    q {
+      quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+      content: '';
+      content: none;
+    }
+
+    /* Small 400px */
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      background-color: #f1f1fa;
+      color: #224;
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.25rem;
+      font-weight: 400
+    }
+
+    main {
+      /* make sure to cover the screen */
+      min-height: 100vh;
+      /* need a solid bg to hide the footer */
+      background: white;
+      /* put on top */
+      position: relative;
+      z-index: 1;
+      font: 16px/1.4 system-ui, sans-serif;
+      padding: 2rem 0;
+    }
+
+    main .content-text {
+      padding-left: calc(100%/16*2)
+    }
+
+    footer {
+      /* place on the bottom */
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ff7100;
+      background: linear-gradient(to bottom, #ff7100, #ff7100);
+      display: grid;
+      place-items: center;
+      padding: 50px 20px
+    }
+
+    nav {
+      padding-left: calc(100% / 12);
+    }
+
+    nav a {
+      padding: 0 15px 0 0;
+      line-height: 2em;
+      height: auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    hr,
+    p {
+      margin: 0 0 1rem
+    }
+
+    h1 {
+      font-family: "Hepta Slab", serif;
+      font-size: 3rem
+    }
+
+    h2 {
+      font-family: "Hepta Slab", serif;
+      font-weight: 100;
+      font-size: 2rem
+    }
+
+    a.skip-main {
+      left: -999px;
+      position: absolute;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      z-index: -999
+    }
+
+
+    /* Variable Font */
+    @font-face {
+      font-family: 'space-grotesk-v2';
+      src: url('../fonts/space-grotesk-v2/woff2/SpaceGrotesk.woff2') format('woff2');
+      font-weight: 125 950;
+      font-stretch: 75% 125%;
+      font-style: normal;
+    }
+
+
+
+    /* Fluid Font Exploration */
+    h1,
+    h2,
+    h3 {
+      font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+      line-height: 1.1;
+      font-weight: 900
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      font-size: clamp(var(--fluid-type-min, 1rem), calc(1rem + var(--fluid-type-target, 3vw)), var(--fluid-type-max, 1.3rem))
+    }
+
+    h1 {
+      --fluid-type-min: 2.5rem;
+      --fluid-type-max: 5rem;
+      --fluid-type-target: 5vw;
+      max-width: 40ch
+    }
+
+    h2 {
+      --fluid-type-min: 1.8rem;
+      --fluid-type-max: 3rem
+    }
+
+    h3 {
+      --fluid-type-min: 1.5rem;
+      --fluid-type-max: 2.5rem
+    }
+
+    h2,
+    h3 {
+      max-width: 30ch
+    }
+
+    p {
+      font-family: 'space-grotesk-v2';
+      max-width: 60ch;
+      font-weight: 400;
+    }
+
+
+    /* Layout */
+    .flex-all {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .align-self-end {
+      display: block;
+      float: right;
+    }
+
+    .flex-all.center {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      min-height: 10px;
+      -webkit-box-pack: center;
+    }
+
+    .flex-all.center.center {
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    .exergue {
+      background: #f5f5f5;
+      padding: 3em;
+      padding-left: calc(100% / 12);
+      line-height: 1.5;
+      z-index: 1000;
+      position: relative;
+    }
+
+
+
+
+
+    .footer__inner {
+      display: -webkit-box;
+      display: flex;
+      flex-wrap: wrap;
+      -webkit-box-align: center;
+      align-items: center;
+    }
+
+    .footer__item {
+      flex-basis: 50%;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* Only Mobile */
+    @media screen and (max-width: 608px) {
+      .desktop-only {
+        display: none;
+      }
+    }
+
+    /* Medium 608px */
+    @media screen and (min-width: 608px) {
+      .footer__item {
+        font-size: 1rem;
+      }
+
+      .mobile-only {
+        display: none;
+      }
+    }
+
+    /* large 1024 */
+    @media screen and (min-width: 1025px) {
+      nav {
+        position: relative;
+        display: flex;
+        width: 100%
+      }
+
+      nav a.first {
+        font-size: 1.5em;
+      }
+
+      nav a {
+        padding: 0 15px 0 0;
+        line-height: 2em;
+        height: auto;
+        flex-wrap: wrap;
+        display: block
+      }
+
+      main h1,
+      main h2,
+      main h3,
+      main h4,
+      main hr,
+      main nav,
+      main p {
+        margin: 0 0 1rem
+      }
+
+      h1 {
+        font-family: "Hepta Slab", serif;
+        font-size: 3rem
+      }
+
+      h2 {
+        font-family: "Hepta Slab", serif;
+        font-weight: 100;
+        font-size: 2rem
+      }
+
+      nav a {
+        float: left;
+      }
+
+      nav a.first {
+        flex-grow: 4;
+      }
+
+      nav::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .inactive {
+        display: inline;
+      }
+
+      .footer__inner {
+        width: 90%;
+      }
+
+      .footer__inner {
+        flex-wrap: nowrap;
+      }
+
+      .footer__item {
+        padding-right: 4rem;
+        font-size: 1.1rem;
+        margin: 0;
+        -webkit-box-flex: 0;
+        flex: 0 0 auto;
+      }
+    }
+
+    /* large 1440+ */
+  </style>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-main">Passer au contenu principal</a>
+  <div class="layout" role="document">
+    <header role="banner">
+      <nav class="flex-all">
+        <a class="button first mobile-only" href="">OM</a>
+        <a class="button first desktop-only" href="">Optrick Media</a>
+
+      </nav>
+    </header>
+    <section class="exergue">
+      <h1>Tommy Saucier Plourde</h1>
+      <h2>Designer web - frontend</h2>
+      <hr>
+      <p>As a web designer, it’s imperative that you find the perfect balance between business and art when designing. Sounds easier said than done, of course. When crafting a web experience, you have to take into account the client you’re working with, the message the team wants to convey, and how the audience could potentially react to the interface. Average web designers just make each new site similar to the next with subtle customer-specific changes. Experienced web designers, however, know that time and effort delivers the best results!</p>
+    </section>
+
+    <main>
+      <div class="">
+        <article class="content-text [ post ] [ flow ]">
+          <h1>Fusce dapibus</h1>
+          <h2>Donec ullamcorper nulla non</h2>
+          <h3>Morbi leo risus, porta ac consectetur</h3>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vestibulum id ligula porta felis euismod semper.</p>
+          <h4>A semantic, breakout button</h4>
+          <p>This whole box is clickable, but still uses a button element, correctly.</p>
+          <button class="breakout-button" type="button" hidden>Say Hi 👋</button>
+          <h1>The Odyssey, Book I</h1>
+          <h2>A story by Homer</h2>
+          <p>Tell me, <em>O muse</em>, of that ingenious hero who travelled far and wide after he had sacked the famous town of Troy. Many cities did he visit, and many were the nations with whose manners and customs he was acquainted; moreover he suffered much by sea while trying to save his own life and bring his men safely home; but do what he might he could not save his men, for they perished through their own sheer folly in eating the cattle of the Sun-god Hyperion; so the god prevented them from ever reaching home. Tell me, too, about all these things, O daughter of Jove, from whatsoever source you may know them.
+          </p>
+          <h2>Somewhere in the middle, another header appeared</h2>
+          <p>So now all who escaped death in battle or by shipwreck had got safely home except Ulysses, and he, though he was longing to return to his wife and country, was detained by the goddess Calypso, who had got him into a large cave and wanted to marry him. But as years went by, there came a time when the gods settled that he should go back to Ithaca; even then, however, when he was among his own people, his troubles were not yet over; nevertheless all the gods had now begun to pity him except Neptune, who still persecuted him without ceasing and would not let him get home. </p>
+      </div>
+    </main>
+    <footer class="" role="contentinfo">
+      <div class="footer__inner container">
+        <div hidden="">
+          <img class="u-photo" src="#" alt="Portrait de Tommy Saucier Plourde">
+          <p class="p-note">Je suis Tommy Saucier Plourde et je suis un frontend/designer graphique basé au Québec</p>
+        </div>
+        <p class="footer__item">
+          <strong>© 2014–2020</strong><br>
+          <a class="p-name u-url" rel="me" href="https://mxb.dev">Tommy Saucier Plourde</a>
+        </p>
+        <p class="footer__item">
+          <strong>Contact</strong>
+          <br><a href="mailto:tom@optrickmedia.com" rel="me" class="u-email">tom@optrickmedia.com</a>
+        </p>
+        <p class="footer__item">
+          <strong>Social</strong>
+          <br><a href="https://twitter.com/mxbck" title="Twitter" rel="me">behance</a> /
+          <a href="https://www.behance.net/optrickmedia" title="Github" rel="me">Github</a>
+        </p>
+        <p class="footer__item">
+          <strong>Legal</strong>
+          <br><a href="/privacy/">Privacy Policy</a> /
+          <a href="/legal/">Ownership</a>
+        </p>
+        <p class="footer__item">
+          <strong>repertoire</strong>
+          <br><a href="https://repertoire.optrickmedia.com/">Repertoire</a> /
+          <a href="https://tommy.optrickmedia.com/">tommy</a>
+        </p>
+
+
+
+        <!-- <p class="footer__item footer__item--right">
+            <a href="https://github.com/maxboeck/mxb/tree/master/./src/pages/index.njk" class="footer__icon" title="Edit this page on Github">
+              <span class="sr-only">Edit this page on Github</span>
+              <svg class="icon icon--github" role="img" aria-hidden="true" width="24" height="24">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.sprite.svg#icon-github"></use>
+              </svg>
+            </a>
+            <a href="/feed.xml" class="footer__icon" title="RSS Feed"><span class="sr-only">RSS Feed</span>
+              <svg class="icon icon--feed" role="img" aria-hidden="true" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.sprite.svg#icon-feed"></use>
+              </svg>
+            </a>
+          </p> -->
+      </div>
+    </footer>
+
+
+  </div>
+</body>
+
+</html>

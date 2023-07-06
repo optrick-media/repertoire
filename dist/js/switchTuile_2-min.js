@@ -1,0 +1,1 @@
+let elementCardsHover=document.querySelectorAll(".card-hover");elementCardsHover.forEach((e=>{e.addEventListener("click",(()=>e.classList.toggle("revelation")))}));

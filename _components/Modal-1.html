@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head lang='fr'>
+	<title>16 - Modal-1</title>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link rel='stylesheet' type='text/css' media='all' href='../build/css/main-SAIL.css'>
+	<link rel='stylesheet' type='text/css' media='all' href='../build/css/modal.css'>
+
+
+
+	<script src='https://code.jquery.com/jquery-3.5.0.js'></script>
+</head>
+
+<body style='margin:0 auto; max-width:50em'>
+
+<div class="So3 box-modal">
+	<style>
+		.box-modal {
+			max-width: 50em;
+			margin: 0 auto;
+			height: 1000px;
+			background-color: rgb(235,235,235);
+			padding: 150px;
+		}
+	</style>
+	<a href="#id01" class="action button invert b">Open Modal</a>
+</div>
+
+<div id="id01" class="So3 modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <header class="bloc-texte [ flow ]" >
+        <div class="bloc-closebtn">
+          <a href="#" id="closebtn" class="action closebtn">×</a>
+        </div>
+        <img class="composant-explore-logo" src="../media/wysiwyg/Brands/explore.png" alt="Explore plus logo"
+			width="200">
+		<p>Plus vous magasinez, <br> plus vous obtenez de récompenses.</p>
+		<br>
+		<a href="https://www.mcstaging.sail.ca/fr/explore-plus/" class="action link-underline" target="_blank">En savoir plus</a>
+      </header>
+      <div class="main bloc-texte [ flow ]">
+        <p>
+          <span class="medium">Adhérer au programme 
+            <br> de récompenses EXPLORE+.</span>
+        </p>
+        <p><strong>EXPLORE +</strong> est un programme de récompenses 
+          <br> dont les privilèges sont réservés exclusivement aux membres.</p>
+        <a href="https://www.sail.ca/fr/customer/account/create" class="action button invert b " style="width: 100%;">Inscrivez-vous</a>
+        <p class="disclaimer">
+          By signing up, you confirm to have read and understood the <a
+            href="https://www.mcstaging.sail.ca/en/terms-conditions#exploreplus/" target="blank">conditions</a>
+          of our rewards program and that you accept to receive communications from SAIL in the form of emails
+          and/or text messages. <a href="https://www.mcstaging.sail.ca/en/privacy-policy#exploreplus/"
+            target="blank">Privacy policy.</a> </p>
+      </div>
+    </div>
+    <footer class="">
+      <a href="#" class="">close</a>
+    </footer>
+  </div>
+</div>
+
+<div class="So3">
+	<div class="ruban explore">
+		<a href="" id="Ruban" >
+			<img class="composant-explore-logo" src="../media/wysiwyg/Brands/explore.png" alt="Explore plus logo" width="100">
+		</a>
+	</div>
+</div>
+
+<script>
+	document.getElementById("closebtn").onclick = function() {openRuban()};
+
+	function openRuban() {
+		console.log('click')
+		document.getElementById("Ruban").style.display = "block";
+	}
+</script>
+
+
+
+
+</body>
+</html>

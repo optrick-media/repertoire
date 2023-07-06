@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+
+    <link rel="stylesheet" href="/c07.css" />
+
+    <!-- To correct favicon error -->
+    <link rel="shortcut icon" href="#" />
+</head>
+
+<body id="body">
+
+
+    <div id="page">
+        <h1 id="header">List</h1>
+        <h2>Buy groceries <span id="counter"></span></h2>
+        <ul>
+            <li id="one" class="hot"><em>fresh</em> figs</li>
+            <li id="two" class="hot">pine nuts</li>
+            <li id="three" class="hot">honey</li>
+            <li id="four">balsamic vinegar</li>
+        </ul>
+        <div id="newItemButton"><button href="#" id="showForm">new item</button></div>
+        <form id="newItemForm">
+            <input type="text" id="itemDescription" placeholder="Add description" />
+            <input type="submit" id="add" value="add" />
+        </form>
+    </div>
+    <script src="../dist/js/jquery-3.6.3.min.js"></script>
+
+
+    <script>
+        $(function () {
+
+            let $list, $newItemForm, $newItemButton;
+            let item = "";
+            $list = $('ul');
+            $newItemForm = $('#newItemForm');
+            $newItemButton = $('#newItemButton');
+
+            $('li').hide().each(function (index) {
+                $(this).delay(450 * index).fadeIn(1600);
+            });
+
+            //item counter
+            function updateCount() {
+                let items = $('li[class!=complete]').length;
+                $('#counter').text(items);
+            }
+            updateCount();
+
+            //setup form for new items
+            $newItemButton.show();
+            $newItemForm.hide();
+            $('#showForm').on('click', function () {
+                $newItemButton.hide();
+                $newItemForm.show();
+            });
+
+            //adding a new list item
+            $newItemForm.on('submit', function (e) {
+                e.preventDefault();
+                let text = $('input:text').val();
+                $list.append('<li>' + text + '</li>');
+                $('input:text').val('');
+                updateCount();
+            });
+
+            //click handling - uses delegation on <ul> element
+            $list.on('click', 'li', function () {
+                let $this = $(this);
+                let complete = $this.hasClass('complete');
+
+                if (complete === true) {
+                    $this.animate({
+                        opacity: 0.0, paddingLeft: '+=180'
+                    }, 500, 'swing', function () {
+                        $this.remove();
+                    });
+                } else {
+                    item = $this.text();
+                    $this.remove();
+                    $list.append('<li class=\"complete\">' + item + '</li>')
+                        .hide().fadeIn(300);
+                    updateCount();
+                }
+            });
+
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

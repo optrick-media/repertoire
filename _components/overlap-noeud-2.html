@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang='fr'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>overlap-noeud v2</title>
+
+  <link rel='stylesheet' type='text/css' media='all' href='/dist/css/blog.css'>
+
+</head>
+
+<body>
+  <!-- 
+        boilerplate.blog 1.0
+        next step read:     https://www.matuzo.at/blog/html-boilerplate/
+    -->
+  <style>
+    body {
+      max-width: 50em;
+      margin: 0 auto;
+    }
+
+    .skip-content {
+      display: none;
+    }
+
+    .header {
+      height: 70vh;
+      max-height: 750px;
+      width: 100%;
+      z-index: 40;
+      padding: 0;
+    }
+
+    .fullwidth {
+      position: relative;
+      right: 50%;
+      left: 50%;
+      width: 100vw;
+      margin-right: -50vw;
+      margin-left: -50vw;
+    }
+
+    .main {
+      background: rgb(255, 255, 255);
+      border: 2px solid rgb(225, 225, 255);
+      min-height: 500px;
+      margin-top: -250px;
+      overflow: hidden;
+      width: calc(100% - 4%);
+      margin-right: 2%;
+      margin-left: 2%;
+      z-index: 100;
+    }
+
+    .nav {
+      background: rgb(255, 255, 255);
+      border: 2px solid rgb(225, 225, 255);
+      position: fixed;
+      padding: 1rem;
+      max-width: 50em;
+    }
+
+    .center-content {
+      max-width: 50em;
+      margin: 0 auto;
+    }
+  </style>
+
+
+  <header class="header fullwidth">
+    <a href='#main' class="skip-content">Skip to content</a>
+    <div class="center-content">
+
+      <nav class="nav ">
+        <div class=''>
+          <a href=''>Blogue</a>
+        </div>
+        <div class=''>
+          <a href=''>je suis 1</a>
+          <a href=''>maintenant 2</a>
+          <a href=''>pour faire beau</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1>Repertoire Optrick Media</h1>
+    <p>Hello World!</p>
+    <p>Nous sommes en mode déploiement.</p>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Copyright © <span class='current-year'>2021</span>
+      <a target='_blank' href='' class='link brand'>Optrick Media</a>
+      All Rights Reserved
+    </p>
+    <a href="../repertoire/repertoire.html">repertoire</a>
+    <a href="../repertoire/log.html">log</a>
+    <a href="#top" class="js-scroll-top">
+      <span class="u-vh">Back to</span> top
+    </a>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop</title>
+
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            margin: 0 auto;
+            max-width: 45em;
+            background-color: rgb(235, 235, 235);
+            min-height: 100px;
+
+            padding: 15px;
+        }
+    </style>
+
+    <div>
+        <h3>decisionLoop</h3>
+        <select id="selectTable" name="selectTable">
+            <option value="-">-</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="6">6</option>
+            <option value="12">12</option>
+        </select>
+        <select id="scoreDecisionLoop" name="scoreDecisionLoop">
+            <option value="-">-</option>
+            <option value="addition">addition</option>
+            <option value="multi">multi</option>
+            <option value="soustraction">soustraction</option>
+            <option value="division">division</option>
+        </select>
+        <p>
+            <span class="decisionLoop" id="decisionLoop"></span>
+        </p>
+    </div>
+    <script>
+        var msg = 'Choose an operator';
+        document.getElementById('decisionLoop').innerHTML = msg;
+
+        document.getElementById("selectTable").onchange = selectScoreDecisionLoop;
+        document.getElementById("scoreDecisionLoop").onchange = selectScoreDecisionLoop;
+
+        function selectScoreDecisionLoop() {
+            var table = document.getElementById('selectTable').value;
+            // var operator = 'multi';
+            var i = 1;
+            var msg = '';
+            var operator = document.getElementById('scoreDecisionLoop').value;
+            console.log(operator);
+            console.log(msg);
+
+            if (operator === 'addition') {
+                while (i < 11) {
+                    msg += i + ' + ' + table + ' = ' + (i + table) + '<br />';
+                    i++;
+
+                }
+            } else if (operator === 'multi') {
+                while (i < 11) {
+                    msg += i + ' x ' + table + ' = ' + (i * table) + '<br />';
+                    i++;
+                }
+            } else if (operator === 'soustraction') {
+                while (i < 11) {
+                    msg += i + ' - ' + table + ' = ' + (i - table) + '<br />';
+                    i++;
+                }
+            } else if (operator === 'division') {
+                while (i < 11) {
+                    msg += i + ' / ' + table + ' = ' + (i / table) + '<br />';
+                    i++;
+                }
+            } else {
+                msg = 'Choose an operator';
+            }
+
+            document.getElementById('decisionLoop').innerHTML = msg;
+            console.log(msg);
+        }
+    </script>
+
+
+    <div>
+        <h3>doWhileLoop</h3>
+        <p>
+            <span class="doWhileLoop" id="doWhileLoop"></span>
+        </p>
+    </div>
+    <script>
+        var i = 1;
+        var msg = '';
+        var multiplier = 7;
+
+        do {
+            msg += i + ' x ' + multiplier + ' = ' + (i * multiplier) + '<br />';
+            i++;
+        } while (i < 1);
+
+        document.getElementById('doWhileLoop').innerHTML = msg;
+    </script>
+
+
+    <div>
+        <h3>whileLoop</h3>
+        <p>
+            <span class="whileLoop" id="whileLoop"></span>
+        </p>
+    </div>
+    <script>
+        var i = 1;
+        var msg = '';
+
+        while (i < 10) {
+            msg += i + ' x 5 = ' + (i * 5) + '<br />';
+            i++;
+        }
+
+        document.getElementById('whileLoop').innerHTML = msg;
+    </script>
+
+
+    <div>
+        <h3>loop</h3>
+        <p>
+            <span class="loop" id="loop"></span>
+        </p>
+    </div>
+    <script>
+        var scores = [24, 32, 34, 36, 38, 69];
+        var arrayLength = scores.length;
+        var roundNumber = 0;
+        var msg = '';
+        var i;
+
+        for (i = 0; i < arrayLength; i++) {
+            roundNumber = (i + 1);
+            msg += 'Round ' + roundNumber + ': ';
+            msg += scores[i] + '<br />';
+        }
+
+        document.getElementById('loop').innerHTML = msg;
+    </script>
+
+
+</body>
+
+</html>

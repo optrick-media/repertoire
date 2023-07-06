@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Fluid type demo</title>
+  <link rel="stylesheet" href="global.css" />
+</head>
+<body>
+<style type='text/css' xml='space'>
+body {
+  background: #f3f3f3;
+  color: #252525;
+  line-height: 1.5;
+  font-family: Georgia, serif;
+  padding: 2rem;
+}
+h1, h2, h3 {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
+    helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  line-height: 1.1;
+  font-weight: 900;
+}
+h1, h2, h3, p {
+  font-size: clamp(
+    var(--fluid-type-min, 1rem),
+    calc(1rem + var(--fluid-type-target, 3vw)),
+    var(--fluid-type-max, 1.3rem)
+  );
+}
+h1 {
+  --fluid-type-min: 2.5rem;
+  --fluid-type-max: 5rem;
+  --fluid-type-target: 5vw;
+
+  max-width: 15ch;
+}
+
+h2 {
+  --fluid-type-min: 1.8rem;
+  --fluid-type-max: 3rem;
+}
+
+h3 {
+  --fluid-type-min: 1.5rem;
+  --fluid-type-max: 2.5rem;
+}
+
+h2,
+h3 {
+  max-width: 30ch;
+}
+
+p {
+  max-width: 60ch;
+}
+.box {
+  color: #fff;
+  padding: 2rem;
+  max-width: 30rem;
+  background: #252525;
+  position: relative;
+  box-shadow: none;
+  transition: transform 300ms ease-in-out, box-shadow 400ms ease, background 100ms ease;
+}
+[data-interactive]:hover,
+[data-interactive]:focus-within {
+ background: #111111;
+ box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+ transform: translateY(-0.5rem);
+}
+.box > * + * {
+  margin-top: 1em;
+}
+.breakout-button {
+  font: inherit;
+  font-weight: 600;
+  padding: 0.6rem 2rem;
+  background: transparent;
+  color: currentColor;
+  border: 1px solid;
+  transition: background 100ms ease;
+  position: static;
+}
+.breakout-button,
+.breakout-button::before {
+  cursor: pointer;
+}
+.breakout-button::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.breakout-button:focus {
+  outline: none;
+}
+
+.breakout-button:hover {
+  background: #333333;
+}
+.breakout-button:focus::before {
+  outline: 1px solid #ffffff;
+  outline-offset: -0.8rem;
+}
+.box:hover,
+.box:focus-within {
+  background: #111111;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.5rem);
+}
+
+</style>
+
+  <article class="[ post ] [ flow ]">
+    <h1>Fusce dapibus, tellus ac cursus commodo</h1>
+    <h2>Donec ullamcorper nulla non</h2>
+    <h3>Morbi leo risus, porta ac consectetur</h3>
+    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vestibulum id ligula porta felis euismod semper.</p>
+  </article>
+
+
+
+
+
+  <article class="box">
+    <h4>A semantic, breakout button</h4>
+    <p>This whole box is clickable, but still uses a button element, correctly.</p>
+    <button class="breakout-button" type="button" hidden>Say Hi 👋</button>
+
+  </article>
+
+</body>
+<script type="text/javascript">
+const button = document.querySelector('.breakout-button');
+
+if (button) {
+  button.parentElement.setAttribute('data-interactive', '');
+  button.removeAttribute('hidden');
+
+  button.addEventListener('click', evt => {
+    evt.preventDefault();
+
+    alert('Oh hi there 👋');
+  });
+}
+
+</script>
+</html>

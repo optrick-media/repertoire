@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang='fr'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport'
+        content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>bare-article v3</title>
+
+    <link rel='stylesheet' type='text/css' media='all'
+        href='../build/css/blog.css'>
+
+</head>
+
+<body>
+    <!-- 
+        boilerplate.blog 1.0
+        next step read:     https://www.matuzo.at/blog/html-boilerplate/
+    -->
+    <style>
+        body {
+            color: rgb(0, 25 green, 10 blue);
+            line-height: 1.5;
+            font-family: Georgia, serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
+                helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+            line-height: 1.35;
+            font-weight: 900;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            font-size: clamp(var(--fluid-type-min, 1rem),
+                    calc(1rem + var(--fluid-type-target, 3vw)),
+                    var(--fluid-type-max, 1.3rem));
+        }
+
+        h1 {
+            --fluid-type-min: 2.5rem;
+            --fluid-type-max: 5rem;
+            --fluid-type-target: 5vw;
+
+            max-width: 15ch;
+        }
+
+        h2 {
+            --fluid-type-min: 1.8rem;
+            --fluid-type-max: 3rem;
+        }
+
+        h3 {
+            --fluid-type-min: 1.5rem;
+            --fluid-type-max: 2.5rem;
+        }
+
+        h2,
+        h3 {
+            max-width: 30ch;
+        }
+
+        p {
+            max-width: 60ch;
+        }
+
+        picture {
+            display: block;
+            min-height: 200px;
+        }
+    </style>
+
+   
+
+    <main class="main ">
+        <section>
+            <picture class=""
+                style="display:grid;  place-content: center; ">
+                <source media="(min-width:1940px)"
+                    srcset="../media/img/microfrontends-1440w.png">
+                <source media="(min-width:1024px)"
+                    srcset="../media/img/section-head-desktop.png">
+                <source media="(min-width:768px)"
+                    srcset="../media/img/section-head-ipad.png">
+                <img src="../media/img/section-head-mobile.png"
+                    alt="Flowers" style="width:auto;">
+            </picture>
+            <div class="section-head">
+                <div>
+                     <h1>je suis le itre de l'article</h1>
+                     <p>je suis un sous titre </p>
+                     <h2>Lorem ipsum dolor sit amet consectetur adipisicing</h2>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tenetur recusandae deserunt architecto officiis repellendus, at excepturi ducimus illo possimus qui nemo consectetur magni neque voluptatem accusamus, magnam nobis itaque.</p>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tenetur recusandae deserunt architecto officiis repellendus, at excepturi ducimus illo possimus qui nemo consectetur magni neque voluptatem accusamus, magnam nobis itaque.</p>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tenetur recusandae deserunt architecto officiis repellendus, at excepturi ducimus illo possimus qui nemo consectetur magni neque voluptatem accusamus, magnam nobis itaque.</p>
+                         <h2>Lorem ipsum dolor sit amet consectetur adipisicing<h2>
+                         <h3>un petit ajout pour peaufiner </h3>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tenetur recusandae deserunt architecto officiis repellendus, at excepturi ducimus illo possimus qui nemo consectetur magni neque voluptatem accusamus, magnam nobis itaque.</p>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tenetur recusandae deserunt architecto officiis repellendus, at excepturi ducimus illo possimus qui nemo consectetur magni neque voluptatem accusamus, magnam nobis itaque.</p>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tenetur recusandae deserunt architecto officiis repellendus, at excepturi ducimus illo possimus qui nemo consectetur magni neque voluptatem accusamus, magnam nobis itaque.</p>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tenetur recusandae deserunt architecto officiis repellendus, at excepturi ducimus illo possimus qui nemo consectetur magni neque voluptatem accusamus, magnam nobis itaque.</p>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tenetur recusandae deserunt architecto officiis repellendus, at excepturi ducimus illo possimus qui nemo consectetur magni neque voluptatem accusamus, magnam nobis itaque.</p>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tenetur recusandae deserunt architecto officiis repellendus, at excepturi ducimus illo possimus qui nemo consectetur magni neque voluptatem accusamus, magnam nobis itaque.</p>
+            </div>
+
+
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <p>
+            Copyright © <span class='current-year'>2021</span>
+            <a target='_blank' href='' class='link brand'>Optrick
+                Media</a>
+            All Rights Reserved
+        </p>
+        <a href="../repertoire/repertoire.html">repertoire</a>
+        <a href="../repertoire/log.html">log</a>
+        <a href="#top" class="js-scroll-top">
+            <span class="u-vh">Back to</span> top
+        </a>
+    </footer>
+
+
+
+</body>
+
+</html>

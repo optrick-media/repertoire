@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang='fr'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>bare-article v3</title>
+
+    <link rel='stylesheet' type='text/css' media='all' href='../build/css/blog.css'>
+    <link rel='stylesheet' type='text/css' media='all' href='../build/css/JavaScript-Cheatsheet.css'>
+
+</head>
+
+<body>
+    <!-- 
+        boilerplate.blog 1.0
+        next step read:     https://www.matuzo.at/blog/html-boilerplate/
+    -->
+    <style>
+        body {
+            color: rgb(0, 25 green, 10 blue);
+            line-height: 1.5;
+            font-family: Georgia, serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
+                helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+            line-height: 1.35;
+            font-weight: 900;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            font-size: clamp(var(--fluid-type-min, 1rem),
+                    calc(1rem + var(--fluid-type-target, 3vw)),
+                    var(--fluid-type-max, 1.3rem));
+        }
+
+        h1 {
+            --fluid-type-min: 2.5rem;
+            --fluid-type-max: 5rem;
+            --fluid-type-target: 5vw;
+
+            max-width: 15ch;
+        }
+
+        h2 {
+            --fluid-type-min: 1.8rem;
+            --fluid-type-max: 3rem;
+        }
+
+        h3 {
+            --fluid-type-min: 1.5rem;
+            --fluid-type-max: 2.5rem;
+        }
+
+        h2,
+        h3 {
+            max-width: 30ch;
+        }
+
+        p {
+            max-width: 60ch;
+        }
+
+        picture {
+            display: block;
+            min-height: 200px;
+        }
+    </style>
+
+
+
+    <main class="main ">
+        <section>
+            <div class="col-lg-9">
+                <div class="d-none d-lg-block">
+                    <div class="row mb-3">
+                        <div class="col-md-9">
+                            <div>
+                                <div>
+                                    <div class="mb-1">
+                                        <strong>
+                                            About this website and SheCodes
+                                        </strong>
+                                    </div>
+                                    <div>
+                                        This website was built using technologies taught in
+                                        <strong>
+                                            <a target="_blank" class="text-branding" href="https://shecodes.io/workshops">SheCodes Coding Workshops</a>
+                                        </strong> including HTML, CSS, JavaScript, React, GitHub, Bootstrap and APIs. <a target="_blank" class="text-branding" href="https://shecodes.io/">SheCodes</a> teaches coding skills to busy women 👩‍💻
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex justify-content-end align-self-end">
+                            <div class="text-white p-0 bg-dark pt-2 pr-3 pl-3 rounded mb-3 shadow-sm"><input type="checkbox" id="theme"> <label for="theme">Dark Theme</label></div>
+                        </div>
+                    </div>
+                    <div class=" bg-white pt-3 pl-3 pr-3 pb-1 shadow-sm rounded-5 mb-3"><span class="mr-2">Snippets categories:</span><a href="/javascript" class="review-filter"><span class="badge badge-secondary m-0 mr-2 active">All</span></a><a href="/cheatsheets/javascript/general" class="review-filter"><span class="badge badge-secondary m-0 mr-2 mb-2 ">General</span></a><a href="/cheatsheets/javascript/variables" class="review-filter"><span class="badge badge-secondary m-0 mr-2 mb-2 ">Variables</span></a><a href="/cheatsheets/javascript/alerts-prompts" class="review-filter"><span class="badge badge-secondary m-0 mr-2 mb-2 ">Alerts &amp; Prompts</span></a><a href="/cheatsheets/javascript/if-else" class="review-filter"><span class="badge badge-secondary m-0 mr-2 mb-2 ">If else</span></a><a href="/cheatsheets/javascript/strings" class="review-filter"><span class="badge badge-secondary m-0 mr-2 mb-2 ">Strings</span></a><a href="/cheatsheets/javascript/arrays" class="review-filter"><span class="badge badge-secondary m-0 mr-2 mb-2 ">Arrays</span></a><a href="/cheatsheets/javascript/dates" class="review-filter"><span class="badge badge-secondary m-0 mr-2 mb-2 ">Dates</span></a><a href="/cheatsheets/javascript/numbers" class="review-filter"><span class="badge badge-secondary m-0 mr-2 mb-2 ">Numbers</span></a><a href="/cheatsheets/javascript/objects" class="review-filter"><span class="badge badge-secondary m-0 mr-2 mb-2 ">Objects</span></a><a href="/cheatsheets/javascript/functions" class="review-filter"><span class="badge badge-secondary m-0 mr-2 mb-2 ">Functions</span></a><a href="/cheatsheets/javascript/debugging" class="review-filter"><span class="badge badge-secondary m-0 mr-2 mb-2 ">Debugging</span></a><a href="/cheatsheets/javascript/selectors" class="review-filter"><span class="badge badge-secondary m-0 mr-2 mb-2 ">Selectors</span></a><a href="/cheatsheets/javascript/events" class="review-filter"><span class="badge badge-secondary m-0 mr-2 mb-2 ">Events</span></a><a href="/cheatsheets/javascript/ajax" class="review-filter"><span class="badge badge-secondary m-0 mr-2 mb-2 ">AJAX</span></a><a href="/cheatsheets/javascript/element-manipulation" class="review-filter"><span class="badge badge-secondary m-0 mr-2 mb-2 ">Element manipulation</span></a><a href="/cheatsheets/javascript/api" class="review-filter"><span class="badge badge-secondary m-0 mr-2 mb-2 ">APIs</span></a></div>
+                </div>
+                <div class="row masonry-grid" style="position: relative; height: 8446.12px;">
+                    <div class="col-lg-6 " style="position: absolute; left: 0px; top: 0px;">
+                        <h2>General</h2>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/general/comments" target="_blank">Comments</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/general/comments" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token comment">// this is a comment </span>
+            <span class="token comment">/* or this is a comment */</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <p>This code will be ignored. Comments are generally a bad idea, your code should be explicit enough as it is.</p>
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://www.w3schools.com/js/js_comments.asp" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 " style="position: absolute; left: 472.117px; top: 0px;">
+                        <h2>Variables</h2>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/variables/variable-creation" target="_blank">Variable creation</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/variables/variable-creation" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> school <span class="token operator">=</span> <span class="token string">"SheCodes"</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> fullPackage <span class="token operator">=</span> <span class="token string">"SheCodes Pro"</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> projects <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> awesome <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/variables/variable-operations" target="_blank">Variable operations</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/variables/variable-operations" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> y <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> z <span class="token operator">=</span> x <span class="token operator">+</span> y<span class="token punctuation">;</span> <span class="token comment">// 5</span>
+            
+            <span class="token keyword">let</span> city <span class="token operator">=</span> <span class="token string">"Lisbon"</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> country <span class="token operator">=</span> <span class="token string">"Portugal"</span>
+            <span class="token keyword">let</span> place <span class="token operator">=</span> city <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> country<span class="token punctuation">;</span> <span class="token comment">//Lisbon Portugal</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div></div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/variables/variable-data-types" target="_blank">Variable data Types</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/variables/variable-data-types" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token number">23</span><span class="token punctuation">;</span> <span class="token comment">// Number</span>
+            <span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">"Julie"</span><span class="token punctuation">;</span> <span class="token comment">// String</span>
+            <span class="token keyword">let</span> canCode <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment">// Boolean, could also be false</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/variables/structure-structure-types" target="_blank"> Structure structure types</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/variables/structure-structure-types" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> students <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Kate"</span><span class="token punctuation">,</span> <span class="token string">"Julie"</span><span class="token punctuation">,</span> <span class="token string">"Mariana"</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// Array</span>
+            
+            <span class="token keyword">let</span> kate <span class="token operator">=</span> <span class="token punctuation">{</span>
+              <span class="token literal-property property">firstName</span><span class="token operator">:</span> <span class="token string">"Kate"</span><span class="token punctuation">,</span>
+              <span class="token literal-property property">lastName</span><span class="token operator">:</span> <span class="token string">"Johnson"</span><span class="token punctuation">,</span>
+              <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">23</span><span class="token punctuation">,</span>
+              <span class="token literal-property property">canCode</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">// Object</span>
+            </code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 " style="position: absolute; left: 0px; top: 304.767px;">
+                        <h2>Alerts &amp; Prompts</h2>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/alerts-prompts/alert" target="_blank">Alert</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/alerts-prompts/alert" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Olá"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            
+            <span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">"Angela"</span><span class="token punctuation">;</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/alerts-prompts/prompt" target="_blank">Prompt</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/alerts-prompts/prompt" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> firstName <span class="token operator">=</span> <span class="token function">prompt</span><span class="token punctuation">(</span><span class="token string">"What is your first name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> lastName <span class="token operator">=</span> <span class="token function">prompt</span><span class="token punctuation">(</span><span class="token string">"What is your last name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> fullName <span class="token operator">=</span> firstName <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> lastName<span class="token punctuation">;</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span>fullName<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 " style="position: absolute; left: 0px; top: 843.834px;">
+                        <h2>If else</h2>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/if-else/if-statement" target="_blank">if statement</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/if-else/if-statement" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> country <span class="token operator">=</span> <span class="token function">prompt</span><span class="token punctuation">(</span><span class="token string">"What country are you from?"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>country <span class="token operator">===</span> <span class="token string">"Portugal"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"You are cool"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>country <span class="token operator">!==</span> <span class="token string">"Portugal"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Too bad for you"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/if-else/if-else-statement" target="_blank">if else statement</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/if-else/if-else-statement" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token function">prompt</span><span class="token punctuation">(</span><span class="token string">"How old are you?"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>age <span class="token operator">&lt;</span> <span class="token number">18</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"You cannot apply"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+              <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"You can apply"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/if-else/nested-if-else-statements" target="_blank">Nested if else statements</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/if-else/nested-if-else-statements" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span>age <span class="token operator">&lt;</span> <span class="token number">18</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"you can't apply"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>age <span class="token operator">&gt;</span> <span class="token number">120</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"you can't apply"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"you can apply"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/if-else/logical-or" target="_blank">Logical Or</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/if-else/logical-or" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span>age <span class="token operator">&lt;</span> <span class="token number">18</span> <span class="token operator">||</span> gender <span class="token operator">===</span> <span class="token string">"male"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"You can't join SheCodes 👩‍💻"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <p>The code will be executed if one statement is true.</p>
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/if-else/logical-and" target="_blank">Logical And</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/if-else/logical-and" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span>continent <span class="token operator">===</span> <span class="token string">"Europe"</span> <span class="token operator">&amp;&amp;</span> language <span class="token operator">===</span> <span class="token string">"Portuguese"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"You are from Portugal 🇵🇹"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+              <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"You are not from Portugal"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <p>The code will be executed if both statements are true.</p>
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/if-else/comparison-and-logical-operators" target="_blank">Comparison and Logical Operators</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/if-else/comparison-and-logical-operators" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token number">2</span> <span class="token operator">&gt;</span> <span class="token number">3</span> <span class="token comment">// false </span>
+            <span class="token number">2</span> <span class="token operator">&lt;</span> <span class="token number">3</span> <span class="token comment">// true </span>
+            <span class="token number">2</span> <span class="token operator">&lt;=</span> <span class="token number">2</span> <span class="token comment">// true</span>
+            <span class="token number">3</span> <span class="token operator">&gt;=</span> <span class="token number">2</span> <span class="token comment">// true</span>
+            <span class="token number">2</span> <span class="token operator">===</span> <span class="token number">5</span> <span class="token comment">// false </span>
+            <span class="token number">2</span> <span class="token operator">!==</span> <span class="token number">3</span> <span class="token comment">// true </span>
+            <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">2</span> <span class="token operator">===</span> <span class="token number">4</span> <span class="token comment">// false</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://www.programiz.com/javascript/comparison-logical" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 " style="position: absolute; left: 472.117px; top: 1135.43px;">
+                        <h2>Strings</h2>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/strings/creating-a-string" target="_blank">Creating a string</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/strings/creating-a-string" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">"SheCodes"</span><span class="token punctuation">;</span> <span class="token comment">// "SheCodes"</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/strings/string-concatenation" target="_blank">String concatenation</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/strings/string-concatenation" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> firstName <span class="token operator">=</span> <span class="token string">"Julie"</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> lastName <span class="token operator">=</span> <span class="token string">"Johnson"</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> fullName <span class="token operator">=</span> firstName <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> lastName<span class="token punctuation">;</span> <span class="token comment">// "Julie Johnson"</span>
+            
+            <span class="token comment">//or</span>
+            <span class="token keyword">let</span> fullName <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>firstName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>lastName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div></div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/strings/trim" target="_blank">Trim</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/strings/trim" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> city <span class="token operator">=</span> <span class="token string">" Montreal  "</span>
+            city<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// "Montreal"</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/strings/replace-javascript" target="_blank">Replace</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/strings/replace-javascript" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> city <span class="token operator">=</span> <span class="token string">"Montreal"</span><span class="token punctuation">;</span>
+            city <span class="token operator">=</span> city<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"e"</span><span class="token punctuation">,</span> <span class="token string">"é"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "Montréal"</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Replace" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/strings/tolowercase" target="_blank">toLowerCase</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/strings/tolowercase" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> city <span class="token operator">=</span> <span class="token string">"Montreal"</span><span class="token punctuation">;</span>
+            city <span class="token operator">=</span> city<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "montreal"</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/strings/touppercase" target="_blank">toUpperCase</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/strings/touppercase" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> city <span class="token operator">=</span> <span class="token string">"Montreal"</span><span class="token punctuation">;</span>
+            city <span class="token operator">=</span> city<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "MONTREAL"</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/strings/template-literals" target="_blank">Template literals</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/strings/template-literals" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> city <span class="token operator">=</span> <span class="token string">"Denver"</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> sentence <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Kate is from </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>city<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span> <span class="token comment">// Kate is from Denver</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 " style="position: absolute; left: 472.117px; top: 2736.95px;">
+                        <h2>Arrays</h2>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/arrays/array-declaration" target="_blank">Array declaration</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/arrays/array-declaration" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> myList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"apples"</span><span class="token punctuation">,</span> <span class="token string">"oranges"</span><span class="token punctuation">,</span> <span class="token string">"bananas"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            myList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'banana'</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> go<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'John'</span><span class="token punctuation">,</span> <span class="token string">'Doe'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string-property property">'firstName'</span><span class="token operator">:</span> <span class="token string">'John'</span><span class="token punctuation">,</span> <span class="token string-property property">'lastName'</span><span class="token operator">:</span> <span class="token string">'Smith'</span><span class="token punctuation">}</span><span class="token punctuation">]</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/arrays/access-an-array" target="_blank">Access an Array</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/arrays/access-an-array" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js">fruits
+            fruits<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+            fruits<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+            fruits<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+            fruits<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/arrays/update-an-array-item" target="_blank">Update an Array item</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/arrays/update-an-array-item" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js">fruits<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Mango"</span><span class="token punctuation">;</span>
+            fruits<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/arrays/while-loop" target="_blank">While loop</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/arrays/while-loop" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> times <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>times <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>times<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              times <span class="token operator">=</span> times <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/arrays/foreach-loop" target="_blank">forEach loop</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/arrays/foreach-loop" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'apples'</span><span class="token punctuation">,</span> <span class="token string">'oranges'</span><span class="token punctuation">,</span> <span class="token string">'bananas'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            fruits<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">fruit</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"I have "</span> <span class="token operator">+</span> fruit <span class="token operator">+</span> <span class="token string">" in my shopping bag"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/arrays/do-while-loop" target="_blank">do while loop</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/arrays/do-while-loop" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> times <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            <span class="token keyword">do</span> <span class="token punctuation">{</span>
+              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>times<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              times <span class="token operator">=</span> times <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">while</span><span class="token punctuation">(</span>times <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/arrays/for-loop" target="_blank">for loop</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/arrays/for-loop" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"i is "</span> <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> myList<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"I have "</span> <span class="token operator">+</span> myList<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">" in my shopping bag"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            </code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/arrays/remove-first-item" target="_blank">Remove first item</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/arrays/remove-first-item" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js">fruits<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 " style="position: absolute; left: 0px; top: 2737.16px;">
+                        <h2>Dates</h2>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/dates/get-current-time" target="_blank">Get current time</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/dates/get-current-time" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> now <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/dates/create-a-date" target="_blank">Create a date</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/dates/create-a-date" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> date <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">"01 Jan 2025 00:00:00 GMT"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/dates/get-date-data" target="_blank">Get date data</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/dates/get-date-data" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> now <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            now<span class="token punctuation">.</span><span class="token function">getMinutes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 0,1,2, 12</span>
+            now<span class="token punctuation">.</span><span class="token function">getHours</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//1, 2, 3, 4</span>
+            now<span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//1, 2, 3, 4</span>
+            now<span class="token punctuation">.</span><span class="token function">getDay</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 0, 1, 2</span>
+            now<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 0, 1, 2</span>
+            now<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 2021</span>
+            </code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 " style="position: absolute; left: 0px; top: 3470.61px;">
+                        <h2>Numbers</h2>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/numbers/round" target="_blank">Round</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/numbers/round" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js">Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token number">4.7</span><span class="token punctuation">)</span> <span class="token comment">// 5</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/numbers/floor" target="_blank">Floor</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/numbers/floor" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js">Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token number">4.7</span><span class="token punctuation">)</span> <span class="token comment">// 4</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/numbers/ceil" target="_blank">Ceil</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/numbers/ceil" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js">Math<span class="token punctuation">.</span><span class="token function">ceil</span><span class="token punctuation">(</span><span class="token number">4.7</span><span class="token punctuation">)</span> <span class="token comment">// 5</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/Ceil" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/numbers/min" target="_blank">Min</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/numbers/min" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js">Math<span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment">// 1</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/numbers/max" target="_blank">Max</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/numbers/max" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js">Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 5</span>
+            </code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/numbers/random" target="_blank">Random</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/numbers/random" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js">Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 0.47231881595639025</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 " style="position: absolute; left: 0px; top: 4676.91px;">
+                        <h2>Objects</h2>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/objects/creating-a-new-object" target="_blank">Creating a new object</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/objects/creating-a-new-object" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> fruit <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "object constructor" syntax</span>
+            
+            <span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">// "object literal" syntax</span>
+            
+            <span class="token keyword">let</span> student <span class="token operator">=</span> <span class="token punctuation">{</span>
+              <span class="token literal-property property">firsName</span><span class="token operator">:</span> <span class="token string">"Julie"</span><span class="token punctuation">,</span>
+              <span class="token literal-property property">lastName</span><span class="token operator">:</span> <span class="token string">"Johnson"</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+            
+            <span class="token keyword">let</span> anotherStudent <span class="token operator">=</span> <span class="token punctuation">{</span>
+              <span class="token literal-property property">firstName</span><span class="token operator">:</span> <span class="token string">"Kate"</span><span class="token punctuation">,</span>
+              <span class="token literal-property property">lastName</span><span class="token operator">:</span> <span class="token string">"Robinson"</span><span class="token punctuation">,</span>
+              <span class="token literal-property property">female</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+              <span class="token function-variable function">greet</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Hey"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+            </code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/objects/reading-an-object-properties" target="_blank">Reading an object properties</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/objects/reading-an-object-properties" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+              <span class="token literal-property property">firstName</span><span class="token operator">:</span> <span class="token string">"Lady"</span><span class="token punctuation">,</span>
+              <span class="token literal-property property">lastName</span><span class="token operator">:</span> <span class="token string">"Gaga"</span><span class="token punctuation">,</span>
+              <span class="token literal-property property">gender</span><span class="token operator">:</span> <span class="token string">"female"</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+            
+            <span class="token function">alert</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>firstName<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Lady</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>lastName<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Gaga</span>
+            
+            <span class="token comment">// or</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span>user<span class="token punctuation">[</span><span class="token string">"firstName"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Lady</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span>user<span class="token punctuation">[</span><span class="token string">"lastName"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Gaga</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/objects/adding-object-properties" target="_blank">Adding object properties</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/objects/adding-object-properties" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+              <span class="token literal-property property">firstName</span><span class="token operator">:</span> <span class="token string">"Lady"</span><span class="token punctuation">,</span>
+              <span class="token literal-property property">lastName</span><span class="token operator">:</span> <span class="token string">"Gaga"</span><span class="token punctuation">,</span>
+              <span class="token literal-property property">gender</span><span class="token operator">:</span> <span class="token string">"female"</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+            
+            user<span class="token punctuation">.</span>profession <span class="token operator">=</span> <span class="token string">"Singer"</span><span class="token punctuation">;</span>
+            </code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/objects/object-arrays" target="_blank">Object Arrays</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/objects/object-arrays" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> users <span class="token operator">=</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">{</span>
+                <span class="token literal-property property">firstName</span><span class="token operator">:</span> <span class="token string">"Bradley"</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">lastName</span><span class="token operator">:</span> <span class="token string">"Cooper"</span><span class="token punctuation">,</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                <span class="token literal-property property">firstName</span><span class="token operator">:</span> <span class="token string">"Lady"</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">lastName</span><span class="token operator">:</span> <span class="token string">"Gaga"</span><span class="token punctuation">,</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">]</span><span class="token punctuation">;</span>
+            
+            users<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">user<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> prop <span class="token keyword">in</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">alert</span><span class="token punctuation">(</span>prop <span class="token operator">+</span> <span class="token string">" is "</span> <span class="token operator">+</span> user<span class="token punctuation">[</span>prop<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            </code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/objects/enumerating-the-properties-of-an-object" target="_blank">Enumerating the properties of an object</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/objects/enumerating-the-properties-of-an-object" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+              <span class="token literal-property property">firstName</span><span class="token operator">:</span> <span class="token string">'Lady'</span><span class="token punctuation">,</span>
+              <span class="token literal-property property">lastName</span><span class="token operator">:</span> <span class="token string">'Gaga'</span><span class="token punctuation">,</span>
+              <span class="token literal-property property">gender</span><span class="token operator">:</span> <span class="token string">'female'</span>
+            <span class="token punctuation">}</span>
+            
+            
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> prop <span class="token keyword">in</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">alert</span><span class="token punctuation">(</span>prop<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// firstName, lastName, gender</span>
+              <span class="token function">alert</span><span class="token punctuation">(</span>user<span class="token punctuation">[</span>prop<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 'Lady', 'Gaga', 'female'</span>
+            <span class="token punctuation">}</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 " style="position: absolute; left: 472.117px; top: 4788.22px;">
+                        <h2>Functions</h2>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/functions/js-functions-javascript" target="_blank">JS Functions</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/functions/js-functions-javascript" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">function</span> <span class="token function">sayFact</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token function">prompt</span><span class="token punctuation">(</span><span class="token string">"What's your name?"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>name <span class="token operator">===</span> <span class="token string">"Sofia"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Your name comes from the Greek -&gt; Sophia"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            
+            <span class="token function">sayFact</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <p>Piece of code that does one or more actions </p>
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/functions/js-functions-parameters" target="_blank">JS Functions Parameters</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/functions/js-functions-parameters" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">function</span> <span class="token function">fullName</span><span class="token punctuation">(</span><span class="token parameter">firstName<span class="token punctuation">,</span> lastName</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">alert</span><span class="token punctuation">(</span>firstName <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> lastName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            
+            <span class="token keyword">let</span> firstName <span class="token operator">=</span> <span class="token function">prompt</span><span class="token punctuation">(</span><span class="token string">"What's your first name?"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> lastName <span class="token operator">=</span> <span class="token function">prompt</span><span class="token punctuation">(</span><span class="token string">"What's your last name?"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">fullName</span><span class="token punctuation">(</span>firstName<span class="token punctuation">,</span> lastName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">fullName</span><span class="token punctuation">(</span><span class="token string">"Kate"</span><span class="token punctuation">,</span> <span class="token string">"Robinson"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/functions/js-functions-return" target="_blank">JS Functions Return</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/functions/js-functions-return" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span> y</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">return</span> x <span class="token operator">+</span> y<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            
+            <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> result2 <span class="token operator">=</span> <span class="token function">add</span><span class="token punctuation">(</span>result<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            
+            
+            <span class="token keyword">function</span> <span class="token function">getFullName</span><span class="token punctuation">(</span><span class="token parameter">firstName<span class="token punctuation">,</span> lastName</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">let</span> fullName <span class="token operator">=</span> firstName <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> lastName<span class="token punctuation">;</span>
+              <span class="token keyword">return</span> fullName<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            
+            <span class="token keyword">let</span> userFullName <span class="token operator">=</span> <span class="token function">getFullName</span><span class="token punctuation">(</span><span class="token string">"Kate"</span><span class="token punctuation">,</span> <span class="token string">"Robinson"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span>userFullName<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Kate Robinson</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span><span class="token function">getFullName</span><span class="token punctuation">(</span><span class="token string">"Julie"</span><span class="token punctuation">,</span> <span class="token string">"Smith"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Julie Smith</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/functions/closures" target="_blank">Closures</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/functions/closures" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">function</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">function</span> <span class="token function">go</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                alert <span class="token function">go</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+            
+              <span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">"Matt"</span><span class="token punctuation">;</span>
+              <span class="token function">go</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 " style="position: absolute; left: 472.117px; top: 6316.94px;">
+                        <h2>Debugging</h2>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/debugging/console-log" target="_blank">Console.log</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/debugging/console-log" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Let's code!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <p>Outputs a message to the web console.</p>
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/log" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 " style="position: absolute; left: 472.117px; top: 6600.71px;">
+                        <h2>Selectors</h2>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/selectors/queryselector" target="_blank">QuerySelector</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/selectors/queryselector" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> li <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"li"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> day <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".day"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> paragraph <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"ul#list p"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <p>Returns the first element (if any) on the page matching the selector.</p>
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/selectors/queryselectorall" target="_blank">QuerySelectorAll</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/selectors/queryselectorall" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> lis <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"li"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> paragraphs <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"li#special p"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <p>Returns all elements (if any) on the page matching the selector.</p>
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 " style="position: absolute; left: 0px; top: 6755.06px;">
+                        <h2>Events</h2>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/events/creating-an-event-listener" target="_blank">Creating an event listener</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/events/creating-an-event-listener" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">function</span> <span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"hi"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            
+            <span class="token keyword">let</span> element <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#city"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            element<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> sayHi<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <p>The sayHi function will be executed each time the city element is clicked.
+                                        Click is the most common event type but you can also use click | mouseenter | mouseleave | mousedown | mouseup | mousemove | keydown | keyup. </p>
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 " style="position: absolute; left: 472.117px; top: 7167.62px;">
+                        <h2>AJAX</h2>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/ajax/ajax-with-fetch" target="_blank">AJAX with Fetch</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/ajax/ajax-with-fetch" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> root <span class="token operator">=</span> <span class="token string">'https://jsonplaceholder.typicode.com'</span>
+            <span class="token keyword">let</span> path <span class="token operator">=</span> <span class="token string">'users/1'</span>
+            
+            <span class="token function">fetch</span><span class="token punctuation">(</span>root <span class="token operator">+</span> <span class="token string">'/'</span> <span class="token operator">+</span> path<span class="token punctuation">)</span>
+              <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+                response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+              <span class="token punctuation">)</span><span class="token punctuation">)</span>
+              <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">json</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>json<span class="token punctuation">)</span>
+              <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <p><small>Note: We recommend axios instead</small></p>
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/ajax/ajax-with-axios" target="_blank">AJAX with Axios</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/ajax/ajax-with-axios" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>html<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://unpkg.com/axios/dist/axios.min.js"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+                  <span class="token keyword">function</span> <span class="token function">showUser</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">The user name is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span>
+            
+                  <span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token string">"https://jsonplaceholder.typicode.com/users/1"</span><span class="token punctuation">;</span>
+                  axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>showUser<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://github.com/axios/axios" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 " style="position: absolute; left: 0px; top: 7175.36px;">
+                        <h2>Element manipulation</h2>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/element-manipulation/html-classes" target="_blank">HTML classes</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/element-manipulation/html-classes" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> li <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"li#special"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            li<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">"liked"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            li<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"something"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <p>Update the element class names.</p>
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/element-manipulation/html-content" target="_blank">HTML content</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/element-manipulation/html-content" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">let</span> li <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"li"</span><span class="token punctuation">)</span>
+            li<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">"Hello World"</span><span class="token punctuation">;</span></code></pre>
+                                <div class="Snippet-footer">
+                                    <p>Update the HTML content of the selected element.</p>
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/element-manipulation/forms" target="_blank">Forms</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/element-manipulation/forms" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span><span class="token punctuation">&gt;</span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+            
+            <span class="token keyword">function</span> <span class="token function">signUp</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">let</span> input <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#email"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>input<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">let</span> form <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"form"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            form<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"submit"</span><span class="token punctuation">,</span> signUp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
+                                <div class="Snippet-footer">
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div></div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 " style="position: absolute; left: 472.117px; top: 8046.82px;">
+                        <h2>APIs</h2>
+                        <div class="">
+                            <div class="Snippet Snippet--light border">
+                                <div class="Snippet-header d-flex justify-content-between">
+                                    <h3><a href="/cheatsheets/javascript/api/geolocation-api" target="_blank">Geolocation API</a></h3>
+                                    <div><a class="btn btn-sm btn-branding-outline" href="/cheatsheets/javascript/api/geolocation-api" target="_blank"><i class="fas fa-link mr-0" aria-hidden="true"></i></a><button class="btn btn-sm btn-branding-outline ml-2">Copy</button></div>
+                                </div>
+                                <pre class="Snippet-code language-js" tabindex="0"><code class="language-js"><span class="token keyword">function</span> <span class="token function">handlePosition</span><span class="token punctuation">(</span><span class="token parameter">position</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>position<span class="token punctuation">.</span>coords<span class="token punctuation">.</span>latitude<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>position<span class="token punctuation">.</span>coords<span class="token punctuation">.</span>longitude<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            
+            navigator<span class="token punctuation">.</span>geolocation<span class="token punctuation">.</span><span class="token function">getCurrentPosition</span><span class="token punctuation">(</span>handlePosition<span class="token punctuation">)</span>
+            </code></pre>
+                                <div class="Snippet-footer">
+                                    <p>The Geolocation API allows the user to provide their location to web applications if they so desire. For privacy reasons, the user is asked for permission to report location information.</p>
+                                    <div class="Snippet-cheatsheet">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="Snippet-url"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API" target="_blank">More info</a></p>
+                                            </div><a href="/javascript" class="d-flex"><img src="//s3.amazonaws.com/shecodesio-production/cheatsheets/logos/000/000/003/original/javascript.png?1616282692"><span class="text-muted">JavaScript</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <p>
+            Copyright © <span class='current-year'>2021</span>
+            <a target='_blank' href='' class='link brand'>Optrick
+                Media</a>
+            All Rights Reserved
+        </p>
+        <a href="../repertoire/repertoire.html">repertoire</a>
+        <a href="../repertoire/log.html">log</a>
+        <a href="#top" class="js-scroll-top">
+            <span class="u-vh">Back to</span> top
+        </a>
+    </footer>
+
+
+
+</body>
+
+</html>

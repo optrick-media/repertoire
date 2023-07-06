@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>activite</title>
+    <link rel='stylesheet' type='text/css' media='all' href='../dist/css/sassy-grid.css'>
+
+</head>
+
+<body style=" background: rgb(38, 3, 93);">
+
+
+    <style>
+        main.main {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            height: 100vh;
+            width: calc(100vw - 40px);
+            margin: 80px 20px;
+        }
+
+        .card--bg- {
+            background-image: url(../media/img/activitya.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: -500px 0;
+        }
+
+        @media (min-width:768px) {
+            .card--bg- {
+                background-position: 0px 0px;
+            }
+        }
+
+        .card img.card__img_sexy {
+            width: 200px !important;
+            height: 100% !important;
+        }
+    </style>
+
+
+    <main class="main">
+
+        <div class="card  card--bg- flow">
+            <header class="card__header">
+                <img src="../media/img/Categorie.png" class="card__img card__img_sexy" alt="" width="545" height="680">
+                <div>
+                    <h3>God time for him</h3>
+                    <p>worshipping is dick</p>
+                </div>
+            </header>
+            <p class="card__lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt error quo nobis debitis ipsum, ipsam tempora doloribus esse eligendi, distinctio eveniet minus? Provident dolorem, eum ipsam incidunt ad nihil aspernatur omnis!
+            </p>
+            <p class="card__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quia, hic tempora dolor obcaecati odit provident suscipit, molestiae beatae eaque consectetur earum laudantium aliquam. Odio reprehenderit explicabo voluptas ratione dolorum cupiditate ab. Sunt quae quam officiis alias! Corrupti in ducimus facere inventore!</p>
+
+
+            <button class="button-addLorem asdw">add a lorem</button>
+            <div class="lorem-add asdw hide">
+                <p>B-Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et voluptatum totam quisquam. Labore, facere. In vero vitae molestiae. Repellendus magni placeat minima culpa dignissimos! Tenetur doloribus velit architecto illum.</p>
+            </div>
+            <div class="card-hover"></div>
+
+
+
+    </main>
+
+    <!-- plusieurs objets utilisent la même function pour opéré -->
+    <script src="../dist/js/switchTuile_2.js"></script>
+
+    <!-- plusieurs buttons font appraître chacun leur contenu grâche à une class commune inconnu -->
+    <script src="../dist/js/addBonus_2.js"></script>
+
+</body>
+
+</html>

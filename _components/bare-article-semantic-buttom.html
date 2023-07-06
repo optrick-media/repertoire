@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang='fr'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>bare-article-semantic-buttom</title>
+
+  <link rel='stylesheet' type='text/css' media='all' href='/dist/css/blog.css'>
+
+</head>
+
+<body>
+  <!-- 
+        boilerplate.blog 1.0
+        next step read:     https://www.matuzo.at/blog/html-boilerplate/
+    -->
+  <style>
+    picture {
+      min-height: 200px;
+    }
+
+
+    .box {
+      color: #fff;
+      padding: 2rem;
+      margin: 2em 0;
+      max-width: 30rem;
+      background: #252525;
+      position: relative;
+      box-shadow: none;
+      transition: transform 300ms ease-in-out, box-shadow 400ms ease, background 100ms ease;
+    }
+
+    [data-interactive]:hover,
+    [data-interactive]:focus-within {
+      background: #111111;
+      box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+      transform: translateY(-0.5rem);
+    }
+
+    .box>*+* {
+      margin-top: 1em;
+    }
+
+    .breakout-button {
+      font: inherit;
+      font-weight: 600;
+      padding: 0.6rem 2rem;
+      background: transparent;
+      color: currentColor;
+      border: 1px solid;
+      transition: background 100ms ease;
+      position: static;
+    }
+
+    .breakout-button,
+    .breakout-button::before {
+      cursor: pointer;
+    }
+
+    .breakout-button::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .breakout-button:focus {
+      outline: none;
+    }
+
+    .breakout-button:hover {
+      background: #333333;
+    }
+
+    .breakout-button:focus::before {
+      outline: 1px solid #ffffff;
+      outline-offset: -0.8rem;
+    }
+
+    .box:hover,
+    .box:focus-within {
+      background: #111111;
+      box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+      transform: translateY(-0.5rem);
+    }
+  </style>
+
+
+  <div class="body-parallax">
+    <div class="parallax">
+      <div class="parallax-group parallax-group--far-left">
+      </div>
+      <div class="parallax-group parallax-group--mid-left">
+      </div>
+      <div class="parallax-group parallax-group--mid-right">
+      </div>
+      <div class="parallax-group parallax-group--far-right">
+      </div>
+    </div>
+  </div>
+
+  <main class="main ">
+    <section>
+      <div class="section-head">
+
+        <div>
+          <h1>Burglos</h1>
+          <h2>Wenner</h2>
+        </div>
+      </div>
+      <h3>Consectetur adipiscing elit</h3>
+      <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with:</p>
+
+      <blockquote>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </blockquote>
+
+      <article class="box">
+        <h4>A semantic, breakout button</h4>
+        <p>This whole box is clickable, but still uses a button element, correctly.</p>
+        <button class="breakout-button" type="button" hidden>Say Hi 👋</button>
+
+      </article>
+      <p> The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.
+      </p>
+      </p>
+      <p>The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it's seen all around the web; on templates, websites, and stock designs. Use our generator to get your own, or read on for the authoritative history of lorem ipsum.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Copyright © <span class='current-year'>2021</span>
+      <a target='_blank' href='' class='link brand'>Optrick Media</a>
+      All Rights Reserved
+    </p>
+    <a href="../repertoire/repertoire.html">repertoire</a>
+    <a href="../repertoire/log.html">log</a>
+    <a href="#top" class="js-scroll-top">
+      <span class="u-vh">Back to</span> top
+    </a>
+  </footer>
+
+
+
+</body>
+
+<script type="text/javascript">
+  const button = document.querySelector('.breakout-button');
+
+  if (button) {
+    button.parentElement.setAttribute('data-interactive', '');
+    button.removeAttribute('hidden');
+
+    button.addEventListener('click', evt => {
+      evt.preventDefault();
+
+      alert('Oh hi there 👋');
+    });
+  }
+
+</script>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Delegation</title>
+
+    <!-- To correct favicon error -->
+    <link rel="shortcut icon" href="#" />
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            margin: 0 auto;
+            max-width: 45em;
+            background-color: rgb(235, 235, 235);
+            min-height: 20px;
+            padding: 15px;
+        }
+
+        section:not([class]) {
+            /* every section without class - but won't select Section C */
+            min-height: 100px;
+        }
+
+        .big-font {
+            font-size: 1.25em;
+        }
+
+        .cool {
+            background-color: aqua;
+        }
+
+        .warm {
+            background-color: darkorange;
+        }
+
+        .purple {
+            background-color: lavender;
+        }
+
+        .green {
+            background-color: aquamarine;
+        }
+    </style>
+    <div id="page">
+        <div>
+            <h1 id="header">Event-Delegation</h1>
+
+        </div>
+        <div>
+            <h2 id="header">Using event delegation with parameters</h2>
+            <ul id="shoppingList">
+                <li class="complete"><a href="itemDone.php?id=1"> <em>fresh</em> nuts</a></li>
+                <li class="complete"><a href="itemDone.php?id=2">pine nuts</a></li>
+                <li class="complete"><a href="itemDone.php?id=3">honey</a></li>
+                <li class="complete"><a href="itemDone.php?id=4">balsamic vinegar</a></li>
+            </ul>
+
+            <hr>
+        </div>
+    </div>
+
+    <script>
+        function getTarget(e) {
+            return e.target;
+        }
+
+        function itemDone(e) {
+            //Remone item from the list
+            var target, elParent, elGrandparent;
+            target = getTarget(e);
+            elParent = target.parentNode;
+            elGrandparent = target.parentNode.parentNode;
+            elGrandparent.removeChild(elParent);
+
+            // Prenvent the link from taking you elsewhere
+            if (e.preventDefault) {
+                e.returnValue = false;
+            }
+        }
+
+        //Set up event listener to call itemDone() on click
+        var el = document.getElementById('shoppingList');
+        if (el.addEventListener) {
+            el.addEventListener('click', function (e) {
+                itemDone(e);
+            }, false);
+        } 
+    </script>
+
+
+
+</body>
+
+</html>

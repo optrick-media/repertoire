@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Object</title>
+
+    <!-- To correct favicon error -->
+    <link rel="shortcut icon" href="#" />
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            margin: 0 auto;
+            max-width: 45em;
+            background-color: rgb(235, 235, 235);
+            min-height: 20px;
+            padding: 15px;
+        }
+
+        section:not([class]) {
+            /* every section without class - but won't select Section C */
+            min-height: 100px;
+        }
+
+        .big-font {
+            font-size: 1.25em;
+        }
+
+        .cool {
+            background-color: aqua;
+        }
+
+        .warm {
+            background-color: darkorange;
+        }
+
+        .purple {
+            background-color: lavender;
+        }
+
+        .green {
+            background-color: aquamarine;
+        }
+    </style>
+    <div id="page">
+        <div>
+            <h1 id="header">Event-Object</h1>
+
+        </div>
+        <div>
+            <h2 id="header">Event Listeners with Load</h2>
+            <form method="post" action="#">
+                <label for="mySelf">Create yourself:</label>
+                <input type="text" id="mySelf" />
+                <div id="feedback"></div>
+                <input type="submit" value="Sign up">
+            </form>
+
+            <hr>
+        </div>
+    </div>
+
+    <script>
+        function setup() {
+            var textInput;
+            textInput = document.getElementById('mySelf');
+            textInput.focus();
+        }
+        window.addEventListener('load', setup, false);
+
+        function checkMyself(el, minLength) {
+            var elMsg = document.getElementById('feedback');
+            if (el.value.length < minLength) {
+                elMsg.innerHTML = 'mySelf is too short. Add up';
+            } else {
+                elMsg.innerHTML = 'mySelf dance avec les étoiles';
+            }
+        }
+        let el = document.getElementById('mySelf');
+        el.addEventListener('blur', function () {
+            checkMyself(el, 5);
+        }, false);
+    </script>
+    <div>
+        <h2 id="header"><strong>this</strong> <small style="font-weight: 200;">Keyword</small></h2>
+        <form method="post" action="#">
+            <label for="mySelf">Create thisSelf:</label>
+            <input type="text" id="thisSelf" />
+            <div id="thisBack"></div>
+            <input type="submit" value="Sign up">
+        </form>
+
+        <hr>
+    </div>
+    </div>
+
+    <script>
+        function checkThis() {
+            let elMsg = document.getElementById('thisBack');
+            if (this.value.length < 5) {
+                elMsg.innerHTML = 'myThis is too short. Add up';
+            } else {
+                elMsg.innerHTML = 'myThis dance avec les étoiles';
+            }
+        }
+        let ef = document.getElementById('thisSelf');
+        ef.addEventListener('blur', checkThis, false);
+    </script>
+
+</body>
+
+</html>

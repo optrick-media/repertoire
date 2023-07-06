@@ -1,0 +1,1 @@
+const tomPlayer=new player("Tom",15,5),stephPlayer=new player("Steph",25,5);

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>onClick--withaddListener</title>
+    <link rel='stylesheet' type='text/css' media='all' href='../build/css/blog.css'>
+
+</head>
+
+<body>
+
+    <body style="background-color: rgb(200,200,200);">
+        <div class="main-content" >
+            <main class="configBlog  [ flow ] " style="min-height: 100vh;">
+                <div class="col">
+                    <h1>onClick--withaddListener</h1>
+                    <p id="demo"></p>
+                    <button type="button" onclick="sayHello()">Click me!</button>
+                    <button type="button" id="btn">Not me!</button>
+                </div>
+
+            </main>
+        </div>
+
+
+
+        <script>
+            function sayHello ( ) {
+                const varDemo = "This is fun";
+                document.getElementById("demo").innerHTML = varDemo;
+                console.log(varDemo);
+            }
+
+            document.getElementById("btn").addEventListener("click", bonjour); 
+
+            function bonjour ( ) {
+                const varDemo = "This is fun";
+                document.getElementById("demo").innerHTML = varDemo;
+                console.log(varDemo);
+            }
+        </script>
+    </body>
+
+</html>

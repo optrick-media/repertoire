@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Focus & Blur</title>
+
+    <!-- To correct favicon error -->
+    <link rel="shortcut icon" href="#" />
+</head>
+
+<body id="body">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            margin: 0 auto;
+            max-width: 45em;
+            background-color: rgb(235, 235, 235);
+            min-height: 20px;
+            padding: 15px;
+        }
+
+        form,
+        input {
+            display: block;
+        }
+
+        section:not([class]) {
+            /* every section without class - but won't select Section C */
+            min-height: 100px;
+        }
+
+        .big-font {
+            font-size: 1.25em;
+        }
+
+        .cool {
+            background-color: aqua;
+        }
+
+        .warning {
+            background-color: darkorange;
+        }
+
+        .tip {
+            background-color: lavender;
+        }
+    </style>
+    <div id="page">
+        <div>
+            <h1 id="header">Event</h1>
+
+        </div>
+        <div>
+            <h2 id="header">Focus & Blur</h2>
+            <form method="post" action="#">
+                <label for="yourSelf">Create yourSelf:</label>
+                <input type="text" id="yourSelf" />
+                <div id="feedback"></div>
+                <input type="submit" value="Sign up">
+            </form>
+
+            <hr>
+        </div>
+
+
+        <script>
+            function setup() {
+                var textInput;
+                textInput = document.getElementById('yourSelf');
+                textInput.focus();
+            }
+            window.addEventListener('load', setup, false);
+
+
+            function checkYourSelf() {
+                let yourSelf = el.value;
+                if (yourSelf.length < 5) {
+                    elMsg.className = 'warning';
+                    elMsg.textContent = 'to empty to handle the facts';
+                } else {
+                    elMsg.className = 'cool';
+                    elMsg.textContent = 'looting the stars';
+
+                }
+            }
+            function tipYourSelf() {
+                elMsg.className = 'tip';
+                elMsg.innerHTML = 'Yourself need to be longer. Add YourSelf';
+            }
+
+            let el = document.getElementById('yourSelf');
+            let elMsg = document.getElementById('feedback');
+
+            el.addEventListener('focus', tipYourSelf, false);
+            el.addEventListener('blur', checkYourSelf, false);
+        </script>
+        <div>
+            <h2 id="header">Mouse Event - Determining position</h2>
+            <hr>
+            <div id="stats">
+                screenX: <input type="text" id="sx" />
+                screenY: <input type="text" id="sy" /><span class="divider">|</span>
+                pageX: <input type="text" id="px" />
+                pageY: <input type="text" id="py" /><span class="divider">|</span>
+                clientX: <input type="text" id="cx" />
+                clientY: <input type="text" id="cy" />
+            </div>
+        </div>
+        <script>
+            let sx = document.getElementById('sx');
+            let sy = document.getElementById('sy');
+            let px = document.getElementById('px');
+            let py = document.getElementById('py');
+            let cx = document.getElementById('cx');
+            let cy = document.getElementById('cy');
+
+            function showPosition(event) {
+                sx.value = event.screenX;
+                sy.value = event.screenY;
+                px.value = event.pageX;
+                py.value = event.pageY;
+                cx.value = event.clientX;
+                cy.value = event.clientY;
+            }
+
+            let ef = document.getElementById('body');
+            ef.addEventListener('mousemove', showPosition, false);
+
+        </script>
+        <div>
+            <h2 id="header">Mouse Event - Click</h2>
+            <hr>
+        </div>
+        <script>
+            let mouseMSG = '<div class\"header\"><a id=\"close\" href="#">close X</a></div>';
+            mouseMSG += '<div><h2>System Maintenance</h2>';
+            mouseMSG += 'Our servers are being manipulated by God';
+            mouseMSG += 'During God obsese, please touch YouSelf</div>';
+            console.log(mouseMSG);
+
+            let elNote = document.createElement('div');
+            elNote.setAttribute('id', 'note');
+            elNote.innerHTML = mouseMSG;
+            document.body.appendChild(elNote);
+
+            function dismissNote() {
+                document.body.removeChild(elNote);
+            }
+
+            let elClose = document.getElementById('close');
+            elClose.addEventListener('click', dismissNote, false);
+        </script>
+    </div>
+
+
+
+
+
+
+
+
+    <style>
+
+    </style>
+</body>
+
+</html>
