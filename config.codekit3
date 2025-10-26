@@ -7,7 +7,7 @@
       "uuidString" : "CB747221-C06C-416B-AF93-8BE1F74390E2"
     }
   ],
-  "creatorBuild" : "34472",
+  "creatorBuild" : "34564",
   "files" : {
     "\/_components\/accordion.html" : {
       "cB" : 0,
@@ -159,6 +159,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/_components\/codeInHTML.html",
+      "oF" : 0
+    },
+    "\/_components\/couple-coupon.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/_components\/couple-coupon.html",
       "oF" : 0
     },
     "\/_components\/damier-game-2.html" : {
@@ -353,12 +361,12 @@
       "oAP" : "\/_components\/Looping-Nodelist.html",
       "oF" : 0
     },
-    "\/_components\/Modal-1.html" : {
+    "\/_components\/modal-1.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/_components\/Modal-1.html",
+      "oAP" : "\/_components\/modal-1.html",
       "oF" : 0
     },
     "\/_components\/move-content.html" : {
@@ -558,8 +566,8 @@
       "ft" : 2048,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/_components\/un_article.html",
-      "oF" : 0
+      "oAP" : "\/dist\/un_article.html",
+      "oF" : 2
     },
     "\/_components\/vertical-rythm.html" : {
       "cB" : 0,
@@ -815,6 +823,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/assets\/img\/Lagoon_nebula-Messier_8-Ngc6523.png" : {
+      "ft" : 32768,
+      "iS" : 3017118,
+      "oA" : 0,
+      "oAP" : "\/assets\/img\/Lagoon_nebula-Messier_8-Ngc6523.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
     "\/assets\/img\/protostar.jpg" : {
       "ft" : 16384,
       "iS" : 234025,
@@ -949,6 +970,18 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/dist\/css\/custom-min.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/css\/custom-min-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/dist\/css\/custom.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -972,6 +1005,26 @@
       "oAP" : "\/dist\/css\/exploration-min.css",
       "oF" : 0,
       "pg" : 0
+    },
+    "\/dist\/css\/master.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/css\/master-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/dist\/css\/master.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/css\/master.css.map",
+      "oF" : 0
     },
     "\/dist\/css\/master.min-min.css" : {
       "aP" : 1,
@@ -1331,6 +1384,46 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/dist\/myWorldWeb.code-workspace" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/myWorldWeb.code-workspace",
+      "oF" : 0
+    },
+    "\/dist\/size-classifications.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/size-classifications.html",
+      "oF" : 0
+    },
+    "\/dist\/to-do.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/to-do.html",
+      "oF" : 0
+    },
+    "\/dist\/un_article.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/un_article.html",
+      "oF" : 0
+    },
+    "\/features\/-nav.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/features\/-nav.html",
+      "oF" : 0
+    },
     "\/features\/aside.html" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1395,6 +1488,14 @@
       "oAP" : "\/features\/nav.html",
       "oF" : 0
     },
+    "\/features\/slim_footer.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/features\/slim_footer.html",
+      "oF" : 0
+    },
     "\/features\/tom.html" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1433,6 +1534,14 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/kit\/gallery_photo.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/kit\/gallery_photo.html",
+      "oF" : 0
+    },
     "\/kit\/index.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -1446,7 +1555,7 @@
       "ft" : 2048,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/_components\/size-classifications.html",
+      "oAP" : "\/dist\/size-classifications.html",
       "oF" : 2
     },
     "\/LICENSE" : {
@@ -2322,9 +2431,6 @@
       "no-new-native-nonconstructor" : {
         "active" : 0
       },
-      "no-new-object" : {
-        "active" : 0
-      },
       "no-new-symbol" : {
         "active" : 1
       },
@@ -2336,6 +2442,9 @@
       },
       "no-obj-calls" : {
         "active" : 1
+      },
+      "no-object-constructor" : {
+        "active" : 0
       },
       "no-octal" : {
         "active" : 1
@@ -2390,9 +2499,6 @@
       "no-return-assign" : {
         "active" : 0,
         "optionString" : "'except-parens'"
-      },
-      "no-return-await" : {
-        "active" : 0
       },
       "no-script-url" : {
         "active" : 0
@@ -3010,7 +3116,7 @@
       "moduleType" : 2,
       "removeComments" : 0,
       "sourceMapStyle" : 0,
-      "targetECMAVersion" : 0
+      "targetECMAVersion" : 2018
     },
     "languageDefaultsUserDefined" : [
 
@@ -3021,7 +3127,7 @@
     "npmSaveExactVersion" : 0,
     "npmTargetDependencyListType" : 1,
     "overrideExternalServerCSS" : 0,
-    "previewPathAddition" : "",
+    "previewPathAddition" : "\/dist",
     "purgeCSS" : {
       "blocklistEntries" : [
 
@@ -3066,7 +3172,10 @@
     "skippedFoldersString" : "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
     "sourceFolderName" : "source",
     "susyVersion" : 3,
+    "tsAllowArbitraryExtensions" : 0,
+    "tsAllowImportingTSExtensions" : 0,
     "tsAllowSyntheticDefaultImports" : 0,
+    "tsAllowUMDGlobalAccess" : 0,
     "tsAllowUnreachableCode" : 0,
     "tsAllowUnusedLabels" : 0,
     "tsAlwaysStrict" : 0,
@@ -3075,36 +3184,36 @@
     "tsEmitDecoratorMetadata" : 0,
     "tsESModuleInterop" : 0,
     "tsExactOptionalPropertyTypes" : 0,
+    "tsExperimentalDecorators" : 0,
     "tsForceConsistentCasingInFileNames" : 0,
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
     "tsJSXFactory" : "React.createElement",
-    "tsKeyofStringsOnly" : 0,
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,
     "tsNoImplicitOverride" : 0,
     "tsNoImplicitReturns" : 0,
     "tsNoImplicitThis" : 0,
-    "tsNoImplicitUseStrict" : 0,
     "tsNoLib" : 0,
     "tsNoPropertyAccessFromIndexSignature" : 0,
     "tsNoResolve" : 0,
-    "tsNoStrictGenericChecks" : 0,
     "tsNoUncheckedIndexAccess" : 0,
     "tsNoUnusedLocals" : 0,
     "tsNoUnusedParameters" : 0,
     "tsPreserveConstEnums" : 0,
     "tsPreserveSymlinks" : 0,
     "tsResolveJsonModule" : 0,
+    "tsSkipDefaultLibCheck" : 0,
     "tsSkipLibCheck" : 0,
+    "tsStrictBindCallApply" : 0,
     "tsStrictFunctionTypes" : 0,
     "tsStrictNullChecks" : 0,
     "tsStrictPropertyInitialization" : 0,
     "tsStripInternal" : 0,
-    "tsSuppressExcessPropertyErrors" : 0,
-    "tsSuppressImplicitAnyIndexErrors" : 0,
+    "tsUseDefineForClassFields" : 0,
     "tsUseUnknownInCatchVariables" : 0,
+    "tsVerbatimModuleSyntax" : 0,
     "uglifyDefinesString" : "",
     "uglifyFlags2" : {
       "arguments" : {

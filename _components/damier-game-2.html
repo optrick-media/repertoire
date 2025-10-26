@@ -72,6 +72,7 @@
       min-width: 195px;
     }
 
+
     .content-container {
       margin: 2rem auto;
       max-width: 98vw;
@@ -120,6 +121,115 @@
       width: 65em;
     }
   </style>
+  <style>
+    /* Set common styles for the container elements */
+    #dame2,
+    #dame3 {
+      background: none;
+      border: none;
+    }
+
+
+    .img-cover,
+    .img-contain,
+    .img-circle {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Set common styles for the images */
+    .img-cover img,
+    .img-contain img,
+    .img-circle img {
+      position: absolute;
+      /* vertical and horizontal center */
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Set specific styles for img-cover */
+    .img-cover img {
+      height: 100%;
+      width: auto;
+      max-width: none;
+    }
+
+    .img-cover img.portrait {
+      height: auto;
+      width: 100%;
+    }
+
+    /* Set specific styles for img-contain */
+    .img-contain img {
+      height: auto;
+      width: 100%;
+    }
+
+    .img-contain img.portrait {
+      height: 100%;
+      width: auto;
+    }
+
+    /* Set specific styles for img-circle */
+    .img-circle {
+      border-radius: 50%;
+      /* fixes overflow:hidden bug in Chrome/Opera */
+      -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+    }
+
+    .img-circle:before {
+      /* Makes sure the element is a square */
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 100%;
+    }
+
+    .img-circle img {
+      height: 100%;
+      width: auto;
+      max-width: none;
+      /* fixes border radius bug in Chrome */
+      -webkit-clip-path: circle(50%);
+    }
+
+    .img-circle img.portrait {
+      height: auto;
+      width: 100%;
+    }
+
+
+
+    /* ================================== */
+    /* Styles just for this pen */
+    /* ================================== */
+    body {
+      padding: 15px;
+    }
+
+    h3 {
+      margin: 30px 0;
+      clear: both;
+      width: 100%;
+    }
+
+    .section {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .img-cover,
+    .img-contain,
+    .img-circle {
+      /* Border: 3px solid grey; */
+      float: left;
+    }
+
+    figure {
+      margin: 0
+    }
+  </style>
 </head>
 
 <body>
@@ -145,11 +255,14 @@
     <div class="content-band">
       <div class="item content-text dame" id="dame1">
         <h2>sail</h2>
-        <p>The spectacle before us&nbsp;was indeed sublime</p>
+        <p>The spectacle before us&nbsp;was indeed sublimesss</p>
       </div>
       <div class="item content-figure dame" id="dame2">
         <figure style="text-align: center;">
-          <img title="" src="../media/img/waving-hair-johan-swanepoel1.png" sizes="(max-width: 1024px) 100vw, 1024px" alt="">
+          <div class="img-cover" style="width: 400px; height:522px;">
+
+            <img title="" src="../assets/img/Lagoon_nebula-Messier_8-Ngc6523.png" alt="" class="">
+          </div>
           <!--
               <figcaption >Embrace winter sport with Fat Bike.</figcaption>
             -->
@@ -159,8 +272,9 @@
     <div class="content-band">
       <div class="item content-figure dame" id="dame3">
         <figure style="text-align: center;">
-          <img title="" src="../media/img/waving-hair-johan-swanepoel1.png" sizes="(max-width: 1024px) 100vw, 1024px" alt="">
-          <!--
+          <div class="img-cover" style="width: 400px; height:522px;">
+            <img title="" src="../assets/img/chamaeleon-molecular-cloud.jpg" class="">
+            <!--
               <figcaption >Embrace winter sport with Fat Bike.</figcaption>
             -->
         </figure>
@@ -169,20 +283,19 @@
         <h2>sail</h2>
         <p>The spectacle before us&nbsp;was indeed sublime.</p>
       </div>
-    </div>
-  </div> <!-- /.flex-container.align-items-center     -->
-  <footer class="footer">
-    <p>
-      Copyright © <span class='current-year'>2021</span>
-      <a target='_blank' href='' class='link brand'>Optrick Media</a>
-      All Rights Reserved
-    </p>
-    <a href="../repertoire/repertoire.html">repertoire</a>
-    <a href="../repertoire/log.html">log</a>
-    <a href="#top" class="js-scroll-top">
-      <span class="u-vh">Back to</span> top
-    </a>
-  </footer>
+    </div> <!-- /.flex-container.align-items-center     -->
+    <footer class="footer">
+      <p>
+        Copyright © <span class='current-year'>2021</span>
+        <a target='_blank' href='' class='link brand'>Optrick Media</a>
+        All Rights Reserved
+      </p>
+      <a href="../repertoire/repertoire.html">repertoire</a>
+      <a href="../repertoire/log.html">log</a>
+      <a href="#top" class="js-scroll-top">
+        <span class="u-vh">Back to</span> top
+      </a>
+    </footer>
 
 </body>
 

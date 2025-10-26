@@ -137,23 +137,13 @@ q:after {
 }
 
 .wrap {
-    display: -ms-flexbox;
-    display: -webkit-box;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
 .justify-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
 }
 
@@ -168,20 +158,12 @@ q:after {
 }
 
 .flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 @media (min-width: 768px) {
     .flex {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
         flex-direction: row;
     }
 }
@@ -298,8 +280,6 @@ p {
 
 .body-parallax .parallax {
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     left: 0;
     right: 0;
@@ -321,28 +301,23 @@ p {
 
 .body-parallax .parallax-group:nth-child(1) {
     border-left: 1px solid #687789;
-    -webkit-animation: expand 200ms normal ease-out;
     animation: expand 200ms normal ease-out;
 }
 
 .body-parallax .parallax-group:nth-child(2) {
-    -webkit-animation: expand 400ms normal ease-out;
     animation: expand 400ms normal ease-out;
 }
 
 .body-parallax .parallax-group:nth-child(3) {
-    -webkit-animation: expand 600ms normal ease-out;
     animation: expand 600ms normal ease-out;
 }
 
 .body-parallax .parallax-group:nth-child(4) {
-    -webkit-animation: expand 800ms normal ease-out;
     animation: expand 800ms normal ease-out;
 }
 
 /* Frame content */
 * {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -353,12 +328,9 @@ body {
 }
 
 nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     list-style: none;
     padding: 0;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 0.6rem 0 0.3rem;
 }
@@ -488,11 +460,7 @@ header {
 /* Specification */
 .section-head {
     min-height: 125px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -588,5 +556,3 @@ ul.setCalendar li::before {
 .main-content .col:not(:first-of-type) {
     margin-left: 1em;
 }
-
-/*# sourceMappingURL=blog.css.map */
